@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+// Importing Google Fonts
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -12,11 +13,13 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// Metadata for the portfolio page
 export const metadata: Metadata = {
   title: "Raghuvamshi Reddy's Portfolio",
   description: "Personal portfolio showcasing projects and skills in AI/ML",
 };
 
+// RootLayout component
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -48,58 +51,58 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased gradient-bg`}>
-        <div className="container mx-auto p-4">
+        <div className="container mx-auto p-8">
           {/* Header Section */}
-          <header className="fade-in">
-            <h1 className="text-2xl font-bold">RAGHUVAMSHI REDDY</h1>
-            <p className="text-sm text-gray-600 mb-4">AI/ML Enthusiast</p>
+          <header className="fade-in mb-8">
+            <h1 className="text-3xl font-heading text-primary">Raghuvamshi Reddy</h1>
+            <p className="text-sm text-muted">AI/ML Enthusiast | Developer</p>
           </header>
 
-          {/* About Section */}
-          <section className="mb-4 slide-in-left">
-            <h2 className="text-lg font-semibold">ABOUT ME</h2>
-            <p>
+          {/* About Me Section */}
+          <section className="mb-6 fade-in">
+            <h2 className="text-xl font-heading text-primary">About Me</h2>
+            <p className="text-body">
               I am passionate about harnessing the power of AI and Machine Learning to solve real-world problems.
               My focus areas include computer vision, natural language processing, and data analytics.
             </p>
           </section>
 
           {/* Contact Section */}
-          <section className="mb-4 slide-in-left">
-            <h2 className="text-lg font-semibold">CONTACT</h2>
-            <p>
+          <section className="mb-6 fade-in">
+            <h2 className="text-xl font-heading text-primary">Contact</h2>
+            <p className="text-body">
               Email:{" "}
-              <a href="mailto:raghu.yanala@gmail.com" className="text-blue-600 hover:underline">
+              <a href="mailto:raghu.yanala@gmail.com" className="text-accent hover:underline">
                 raghu.yanala@gmail.com
               </a>
             </p>
           </section>
 
           {/* Projects Section */}
-          <section className="slide-in-left">
-            <h2 className="text-lg font-semibold">PROJECTS</h2>
-            <ul className="list-disc pl-5">
+          <section className="mb-8 fade-in">
+            <h2 className="text-xl font-heading text-primary">Projects</h2>
+            <ul className="list-none space-y-4">
               {projects.map((project, index) => (
                 <li
                   key={project.name}
-                  className={index > 0 ? "slide-in-left" : ""}
+                  className="transition-all duration-300 hover:bg-gray-100 p-4 rounded-lg shadow-lg"
                   style={{ animationDelay: `${index * 0.2}s` }}
                 >
                   <a
                     href={project.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-600 hover:underline"
+                    className="text-accent font-semibold text-lg hover:underline"
                   >
                     {project.name}
                   </a>
-                  <p>{project.description}</p>
+                  <p className="text-muted">{project.description}</p>
                 </li>
               ))}
             </ul>
           </section>
 
-          {/* Render Children */}
+          {/* Render Child Content */}
           <div className="fade-in">{children}</div>
         </div>
       </body>
