@@ -2,41 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Root Variables: Define a professional color palette */
 :root {
-  --background: #f9f9f9;
-  --foreground: #121212;
-  --primary: #007acc; /* Professional blue */
-  --secondary: #ffa500; /* Accent orange */
-  --accent: #32cd32; /* Bright green */
-  --highlight: #ff4500; /* Vibrant red-orange */
-  --text-muted: #6c757d; /* Muted gray */
-  --border-color: #e0e0e0; /* Light gray for borders */
+  --background: #ffffff; /* Neutral white background */
+  --foreground: #212529; /* Dark gray for text */
+  --primary: #0056b3; /* Professional dark blue */
+  --secondary: #ffc107; /* Gold for accents */
+  --accent: #28a745; /* Vibrant green for highlights */
+  --highlight: #dc3545; /* Bright red for alerts or important actions */
+  --text-muted: #6c757d; /* Muted gray for secondary text */
+  --border-color: #dee2e6; /* Subtle gray for borders */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #121212;
-    --foreground: #f1f1f1;
-    --primary: #3399ff;
-    --secondary: #ffae42;
-    --accent: #3cb371;
-    --highlight: #ff6347;
-    --text-muted: #aaaaaa;
-    --border-color: #2c2c2c;
+    --background: #181a1b; /* Dark gray for background */
+    --foreground: #e9ecef; /* Light gray for text */
+    --primary: #3399ff; /* Brighter blue for dark mode */
+    --secondary: #ffce54; /* Softer gold */
+    --accent: #51cf66; /* Light green */
+    --highlight: #ff6b6b; /* Soft red */
+    --text-muted: #ced4da; /* Lighter muted gray */
+    --border-color: #343a40; /* Darker gray for borders */
   }
 }
 
+/* Base Styles */
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-  transition: background-color 0.3s, color 0.3s;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Gradient Background */
 .gradient-bg {
-  background: linear-gradient(45deg, var(--primary), var(--secondary));
-  background-size: 200% 200%;
-  animation: gradientAnimation 15s ease infinite;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  background-size: 300% 300%;
+  animation: gradientAnimation 10s ease infinite;
 }
 
 @keyframes gradientAnimation {
@@ -51,14 +55,37 @@ body {
   }
 }
 
+/* Typography */
 .text-primary {
   color: var(--primary);
+}
+
+.text-secondary {
+  color: var(--secondary);
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.text-highlight {
+  color: var(--highlight);
 }
 
 .text-muted {
   color: var(--text-muted);
 }
 
+.font-heading {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+.font-body {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+/* Borders */
 .border-primary {
   border-color: var(--primary);
 }
@@ -69,4 +96,99 @@ body {
 
 .border-accent {
   border-color: var(--accent);
+}
+
+.border-highlight {
+  border-color: var(--highlight);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  font-weight: 500;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: darken(var(--primary), 10%);
+  border-color: darken(var(--primary), 10%);
+}
+
+.btn-secondary {
+  background-color: var(--secondary);
+  color: #fff;
+  border-color: var(--secondary);
+}
+
+.btn-secondary:hover {
+  background-color: darken(var(--secondary), 10%);
+  border-color: darken(var(--secondary), 10%);
+}
+
+.btn-accent {
+  background-color: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.btn-accent:hover {
+  background-color: darken(var(--accent), 10%);
+  border-color: darken(var(--accent), 10%);
+}
+
+/* Utility Classes */
+.shadow-card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.card {
+  background-color: var(--background);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.list-item {
+  color: var(--foreground);
+  margin-bottom: 0.5rem;
+}
+
+.list-item a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.list-item a:hover {
+  color: var(--highlight);
+}
+
+/* Accessibility */
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--highlight);
+}
+
+a:focus {
+  outline: 2px dashed var(--highlight);
+  outline-offset: 4px;
 }
