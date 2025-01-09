@@ -24,16 +24,59 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased gradient-bg`}>
         <div className="container mx-auto p-4">
-          <header className="mb-8">
-            <h1 className="text-3xl font-bold text-primary">RAGHUVAMSHI REDDY</h1>
-            <p className="text-sm text-muted">AI/ML Enthusiast</p>
+          <header className="fade-in">
+            <h1 className="text-2xl font-bold">RAGHUVAMSHI REDDY</h1>
+            <p className="text-sm text-gray-600 mb-4">AI/ML Enthusiast</p>
           </header>
-          {children}
-          <footer className="mt-8 text-center text-muted">
-            <p>&copy; 2025 Raghuvamshi Reddy. All rights reserved.</p>
-          </footer>
+          <section className="mb-4 slide-in-left">
+            <h2 className="text-lg font-semibold">ABOUT ME</h2>
+            <p>
+              I am passionate about harnessing the power of AI and Machine Learning to solve real-world problems. My focus areas include computer vision, natural language processing, and data analytics.
+            </p>
+          </section>
+          <section className="mb-4 slide-in-left">
+            <h2 className="text-lg font-semibold">CONTACT</h2>
+            <p>Email: <a href="mailto:raghu.yanala@gmail.com" className="text-blue-600 hover:underline">raghu.yanala@gmail.com</a></p>
+          </section>
+          <section className="slide-in-left">
+            <h2 className="text-lg font-semibold">PROJECTS</h2>
+            <ul className="list-disc pl-5">
+              {[
+                {
+                  name: "AI-based Defect Detection",
+                  href: "https://github.com/roar3691/Art_image_classifier",
+                  description: "An ensemble model using MobileNetV3Large and InceptionV3 achieving an F1 score of 0.9893."
+                },
+                {
+                  name: "Weather Monitoring System",
+                  href: "https://github.com/roar3691/weather-monitoring-system",
+                  description: "Real-time weather data fetching for major Indian cities using OpenWeatherMap API."
+                },
+                {
+                  name: "Custom Chatbot",
+                  href: "https://github.com/roar3691/chatbot",
+                  description: "Built using Langchain, extracts course information, creates embeddings, and provides a RESTful API via Flask."
+                },
+                {
+                  name: "Rule Engine Application",
+                  href: "https://github.com/roar3691/RuleEngine-AST",
+                  description: "Uses SQLite for storing rules and Flask for a web interface."
+                }
+              ].map((project, index) => (
+                <li key={project.name} className={index > 0 ? "slide-in-left" : ""} style={{ animationDelay: `${index * 0.2}s` }}>
+                  <a href={project.href} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                    {project.name}
+                  </a>
+                  <p>{project.description}</p>
+                </li>
+              ))}
+            </ul>
+          </section>
+          <div className="fade-in">
+            {children}
+          </div>
         </div>
       </body>
     </html>
