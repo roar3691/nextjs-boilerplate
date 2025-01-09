@@ -5,12 +5,28 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /* Define color palette for light mode */
+  --primary: #4a90e2; /* A vibrant blue */
+  --secondary: #f5a623; /* A warm orange */
+  --accent: #7ed321; /* A lively green */
+  --highlight: #ff5722; /* A bright red-orange */
+  
+  --text-muted: #6c757d; /* A muted gray for less important text */
+  --border-color: #e0e0e0; /* A light gray for borders */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    /* Define color palette for dark mode */
+    --primary: #4d85d5;
+    --secondary: #d38320;
+    --accent: #5eaa20;
+    --highlight: #e64a19;
+    
+    --text-muted: #868e96;
+    --border-color: #343a40; /* Darker border in dark mode */
   }
 }
 
@@ -18,4 +34,65 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for color changes */
+}
+
+/* Add some vibrancy with gradients */
+.gradient-bg {
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+  background-size: 200% 200%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Use colors for text and borders */
+.text-primary {
+  color: var(--primary);
+}
+
+.text-secondary {
+  color: var(--secondary);
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.text-highlight {
+  color: var(--highlight);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.border-primary {
+  border-color: var(--primary);
+}
+
+.border-secondary {
+  border-color: var(--secondary);
+}
+
+.border-accent {
+  border-color: var(--accent);
+}
+
+.border-highlight {
+  border-color: var(--highlight);
+}
+
+.border-default {
+  border-color: var(--border-color);
 }
