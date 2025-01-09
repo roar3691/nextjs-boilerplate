@@ -3,96 +3,115 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  /* Define color palette for light mode */
-  --primary: #4a90e2; /* A vibrant blue */
-  --secondary: #f5a623; /* A warm orange */
-  --accent: #7ed321; /* A lively green */
-  --highlight: #ff5722; /* A bright red-orange */
-  
-  --text-muted: #6c757d; /* A muted gray for less important text */
-  --border-color: #e0e0e0; /* A light gray for borders */
+  /* ... your existing variables ... */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    /* Define color palette for dark mode */
-    --primary: #4d85d5;
-    --secondary: #d38320;
-    --accent: #5eaa20;
-    --highlight: #e64a19;
-    
-    --text-muted: #868e96;
-    --border-color: #343a40; /* Darker border in dark mode */
+/* ... existing styles ... */
+
+/* Custom Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition for color changes */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
-/* Add some vibrancy with gradients */
-.gradient-bg {
-  background: linear-gradient(45deg, var(--primary), var(--secondary));
-  background-size: 200% 200%;
-  animation: gradientAnimation 15s ease infinite;
+@keyframes slideInFromLeft {
+  from { opacity: 0; transform: translateX(-100%); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+.fade-in {
+  animation: fadeIn 1s ease-out;
 }
 
-/* Use colors for text and borders */
-.text-primary {
-  color: var(--primary);
+.bounce {
+  animation: bounce 1s infinite;
 }
 
-.text-secondary {
-  color: var(--secondary);
+.spin {
+  animation: spin 4s linear infinite;
 }
 
-.text-accent {
-  color: var(--accent);
+.slide-in-left {
+  animation: slideInFromLeft 0.5s ease-out;
 }
+```
 
-.text-highlight {
-  color: var(--highlight);
-}
+### Applying Animations in Your Components
 
-.text-muted {
-  color: var(--text-muted);
-}
+Now, let's apply these animations in your `Home` component:
 
-.border-primary {
-  border-color: var(--primary);
-}
+```tsx
+import Image from "next/image";
 
-.border-secondary {
-  border-color: var(--secondary);
-}
+export default function Home() {
+  return (
+    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+        <Image
+          className="dark:invert fade-in"
+          src="/next.svg"
+          alt="Next.js logo"
+          width={180}
+          height={38}
+          priority
+        />
+        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)] slide-in-left">
+          <li className="mb-2">
+            Get started by editing{" "}
+            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
+              app/page.tsx
+            </code>
+            .
+          </li>
+          <li>Save and see your changes instantly.</li>
+        </ol>
 
-.border-accent {
-  border-color: var(--accent);
-}
-
-.border-highlight {
-  border-color: var(--highlight);
-}
-
-.border-default {
-  border-color: var(--border-color);
+        <div className="flex gap-4 items-center flex-col sm:flex-row">
+          <a
+            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 bounce"
+            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              className="dark:invert spin"
+              src="/vercel.svg"
+              alt="Vercel logomark"
+              width={20}
+              height={20}
+            />
+            Deploy now
+          </a>
+          <a
+            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44 slide-in-left"
+            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read our docs
+          </a>
+        </div>
+      </main>
+      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
+        {/* ... existing footer content ... */}
+      </footer>
+    </div>
+  );
 }
