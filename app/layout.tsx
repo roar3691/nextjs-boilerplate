@@ -59,7 +59,7 @@ export default function RootLayout({
                   href="https://www.linkedin.com/in/yanala-raghuvamshi-reddy-a9a831202/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary hover:text-highlight"
+                  className="text-subtle-link hover:text-highlight"
                 >
                   LinkedIn Profile
                 </a>
@@ -100,7 +100,7 @@ export default function RootLayout({
                   href="https://github.com/roar3691/Art_image_classifier"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary font-semibold hover:text-highlight"
+                  className="text-subtle-link hover:text-highlight"
                 >
                   AI-based Defect Detection
                 </a>
@@ -113,7 +113,7 @@ export default function RootLayout({
                   href="https://github.com/roar3691/chatbot"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary font-semibold hover:text-highlight"
+                  className="text-subtle-link hover:text-highlight"
                 >
                   Chatbot Project
                 </a>
@@ -126,7 +126,7 @@ export default function RootLayout({
                   href="https://github.com/roar3691/weather-monitoring-system"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary font-semibold hover:text-highlight"
+                  className="text-subtle-link hover:text-highlight"
                 >
                   Weather Monitoring System
                 </a>
