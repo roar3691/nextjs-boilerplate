@@ -7,6 +7,7 @@ export default function Home() {
       <div className="bg-white dark:bg-gray-900 text-black dark:text-white min-h-screen px-6 transition-colors">
         {/* Hero Section */}
         <section className="text-center py-12">
+          <h1 className="text-5xl font-bold mb-4">Hi, I&apos;m Yanala Raghuvamshi Reddy</h1>
           <p className="text-lg max-w-2xl mx-auto mb-8">
             A passionate AI/ML enthusiast with expertise in software development and research. Building solutions to solve real-world problems with innovation and technology.
           </p>
