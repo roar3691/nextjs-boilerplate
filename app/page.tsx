@@ -1,12 +1,8 @@
 "use client";
 
-import { useState } from "react";
-
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
-
   return (
-    <main className={`${darkMode ? "dark" : ""} min-h-screen`}>
+    <main className="dark min-h-screen">
       {/* Main Content */}
       <div className="bg-white dark:bg-gray-900 text-black dark:text-white min-h-screen px-6 transition-colors">
         {/* Hero Section */}
