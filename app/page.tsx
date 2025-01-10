@@ -7,16 +7,8 @@ export default function Home() {
 
   return (
     <main className={`${darkMode ? "dark" : ""} min-h-screen`}>
-      {/* Toggle Theme Button */}
-      <button
-        onClick={() => setDarkMode(!darkMode)}
-        className="fixed top-4 right-4 p-2 bg-gray-800 dark:bg-gray-200 text-white dark:text-black rounded-full shadow-md hover:shadow-lg transition"
-      >
-        {darkMode ? "Light Mode" : "Dark Mode"}
-      </button>
-
       {/* Main Content */}
-      <div className="bg-white dark:bg-black text-black dark:text-white min-h-screen px-6">
+      <div className="bg-white dark:bg-gray-900 text-black dark:text-white min-h-screen px-6 transition-colors">
         {/* Hero Section */}
         <section className="text-center py-12">
           <h1 className="text-5xl font-bold mb-4">Hi, I&apos;m Yanala Raghuvamshi Reddy</h1>
