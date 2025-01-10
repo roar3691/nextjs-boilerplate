@@ -16,7 +16,7 @@ export default function Home() {
               href="https://github.com/roar3691"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 bg-black dark:bg-white text-white dark:text-black rounded-lg shadow-md hover:shadow-lg transition"
+              className="px-6 py-3 bg-black dark:bg-gray-800 text-white dark:text-gray-300 rounded-lg shadow-md hover:bg-gray-800 dark:hover:bg-gray-600 transition"
             >
               GitHub
             </a>
@@ -24,7 +24,7 @@ export default function Home() {
               href="https://www.linkedin.com/in/yanala-raghuvamshi-reddy-a9a831202/"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 bg-blue-600 dark:bg-white text-white dark:text-black rounded-lg shadow-md hover:shadow-lg transition"
+              className="px-6 py-3 bg-blue-600 dark:bg-blue-700 text-white dark:text-gray-300 rounded-lg shadow-md hover:bg-blue-700 dark:hover:bg-blue-600 transition"
             >
               LinkedIn
             </a>
