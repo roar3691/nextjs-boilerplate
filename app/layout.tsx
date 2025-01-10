@@ -9,7 +9,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         <title>Yanala Raghuvamshi Reddy</title>
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body className="bg-white dark:bg-gray-900 text-black dark:text-white">
+      <body className="bg-white dark:bg-gray-900 text-black dark:text-white transition-colors">
         {children}
       </body>
     </html>
