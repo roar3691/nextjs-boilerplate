@@ -68,8 +68,8 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased gradient-bg`}>
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className="font-sans bg-background text-foreground">
         <div className="container mx-auto p-4">
           {/* Header */}
           <header className="fade-in mb-6">
