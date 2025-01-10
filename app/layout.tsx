@@ -44,6 +44,24 @@ export default function RootLayout({
             </p>
           </section>
 
+          {/* Core Skills Section */}
+          <section className="mb-6">
+            <h2 className="text-primary text-2xl font-heading mb-4">Core Skills</h2>
+            <ul className="list-none space-y-2 text-muted">
+              <li>C, C++, JAVA, PYTHON, SQL</li>
+              <li>Retrieval-Augmented Generation (RAG)</li>
+              <li>Large Language Models (LLM)</li>
+              <li>Flask, Generative AI, Python, Langchain, TF-IDF, FAISS</li>
+              <li>Web Scraping, API Development</li>
+              <li>Data Processing, Datasets, Databases</li>
+              <li>Algorithms, Object Oriented Design</li>
+              <li>Coding Experience, System Performance</li>
+              <li>Data Preparation, Data Collection</li>
+              <li>Presentations, Technical Documentation</li>
+              <li>Technical Proficiency</li>
+            </ul>
+          </section>
+
           {/* Contact Section */}
           <section className="mb-6">
             <h2 className="text-primary text-2xl font-heading mb-4">Contact</h2>
