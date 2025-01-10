@@ -26,65 +26,47 @@ export default function Home() {
           >
             GitHub
           </a>
-          <a
-            href="#projects"
-            className="px-6 py-3 border-2 border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition"
-          >
-            View Projects
-          </a>
         </div>
       </section>
 
-      {/* Projects Section */}
-      <section id="projects" className="mt-12">
-        <h2 className="text-3xl font-bold text-primary mb-6">Projects</h2>
-        <div className="space-y-4">
-          <div className="bg-gray-100 p-4 rounded-lg shadow">
-            <h3 className="text-xl font-semibold">
-              <a
-                href="https://github.com/roar3691/Art_image_classifier"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary hover:text-highlight"
-              >
-                AI-based Defect Detection
-              </a>
-            </h3>
-            <p className="text-muted">
-              Developed a deep learning system using MobileNetV3, achieving high accuracy in identifying defective exhibits.
-            </p>
-          </div>
-          <div className="bg-gray-100 p-4 rounded-lg shadow">
-            <h3 className="text-xl font-semibold">
-              <a
-                href="https://github.com/roar3691/chatbot"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary hover:text-highlight"
-              >
-                Chatbot Project
-              </a>
-            </h3>
-            <p className="text-muted">
-              Built a chatbot using Langchain and Flask for course search functionalities.
-            </p>
-          </div>
-          <div className="bg-gray-100 p-4 rounded-lg shadow">
-            <h3 className="text-xl font-semibold">
-              <a
-                href="https://github.com/roar3691/weather-monitoring-system"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary hover:text-highlight"
-              >
-                Weather Monitoring System
-              </a>
-            </h3>
-            <p className="text-muted">
-              Real-time weather data fetch from OpenWeatherMap API.
-            </p>
-          </div>
-        </div>
+      {/* Core Skills Section */}
+      <section id="skills" className="mt-12">
+        <h2 className="text-3xl font-bold text-primary mb-6">Core Skills</h2>
+        <ul className="list-disc list-inside text-muted space-y-2">
+          <li>C, C++, Python</li>
+          <li>AI/ML, TensorFlow, Flask</li>
+          <li>Web Scraping, Data Processing</li>
+          <li>API Development, OOP</li>
+        </ul>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="mt-12">
+        <h2 className="text-3xl font-bold text-primary mb-6">Contact</h2>
+        <ul className="list-none text-muted space-y-4">
+          <li>
+            Email:{" "}
+            <a
+              href="mailto:raghu.yanala@gmail.com"
+              className="text-primary hover:text-highlight"
+            >
+              raghu.yanala@gmail.com
+            </a>
+          </li>
+          <li>Phone: 6309127542</li>
+          <li>
+            LinkedIn:{" "}
+            <a
+              href="https://www.linkedin.com/in/yanala-raghuvamshi-reddy-a9a831202/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:text-highlight"
+            >
+              LinkedIn Profile
+            </a>
+          </li>
+          <li>Location: Hyderabad, Telangana</li>
+        </ul>
       </section>
     </main>
   );
