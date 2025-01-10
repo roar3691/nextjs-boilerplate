@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Yanala Raghuvamshi Reddy's Portfolio",
-  description: "Personal portfolio showcasing projects, skills, and professional experience in AI/ML",
+  description: "Showcasing projects, skills, and experience in AI/ML",
 };
 
 export default function RootLayout({
@@ -36,28 +36,8 @@ export default function RootLayout({
     {
       name: "Custom Chatbot",
       href: "https://github.com/roar3691/chatbot",
-      description: "Built using Langchain, extracts course information, creates embeddings, and provides a RESTful API via Flask.",
+      description: "Built using Langchain and Flask for a RESTful API and efficient information retrieval.",
     },
-    {
-      name: "Rule Engine Application",
-      href: "https://github.com/roar3691/RuleEngine-AST",
-      description: "Uses SQLite for storing rules and Flask for a web interface.",
-    },
-  ];
-
-  const certificates = [
-    "AWS Academy Graduate - Cloud Foundations",
-    "AWS Academy Graduate - Machine Learning Foundations",
-    "Programming for Everybody (Python) - Coursera",
-  ];
-
-  const skills = [
-    "C, C++, Java, Python, SQL",
-    "Generative AI, Retrieval-Augmented Generation (RAG)",
-    "Langchain, TF-IDF, FAISS",
-    "Web Scraping, API Development, Data Processing",
-    "Machine Learning, Large Language Models (LLM)",
-    "Flask, Databases, Algorithms",
   ];
 
   const contact = {
@@ -69,88 +49,74 @@ export default function RootLayout({
 
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-      <body className="font-sans bg-background text-foreground">
+      <body className="font-body bg-background text-foreground transition-colors">
         <div className="container mx-auto p-4">
-          {/* Header */}
-          <header className="fade-in mb-6">
-            <h1 className="text-3xl font-bold">Yanala Raghuvamshi Reddy</h1>
-            <p className="text-sm text-muted">AI/ML Enthusiast | Researcher | Treasurer, IEEE Computer Society - CMREC</p>
+          {/* Header Section */}
+          <header className="gradient-bg text-foreground p-6 rounded-lg mb-6">
+            <h1 className="text-4xl font-heading font-bold mb-2">Yanala Raghuvamshi Reddy</h1>
+            <p className="text-muted text-lg">
+              AI/ML Enthusiast | Researcher | Treasurer, IEEE Computer Society - CMREC
+            </p>
           </header>
 
           {/* About Section */}
-          <section className="mb-6 slide-in-left">
-            <h2 className="text-lg font-semibold text-primary">About Me</h2>
+          <section className="mb-6">
+            <h2 className="text-primary text-2xl font-heading mb-4">About Me</h2>
             <p className="text-muted">
-              As an innovative technology professional, I specialize in developing cutting-edge solutions at the intersection of 
-              artificial intelligence and software development. My expertise spans multiple domains, focusing on impactful 
-              applications that solve real-world challenges.
+              As an innovative technology professional, I specialize in developing solutions at the intersection of 
+              artificial intelligence and software development. My expertise spans multiple domains, with a focus on 
+              impactful applications that solve real-world challenges.
             </p>
           </section>
 
           {/* Contact Section */}
-          <section className="mb-6 slide-in-left">
-            <h2 className="text-lg font-semibold text-primary">Contact</h2>
-            <p>Email: <a href={`mailto:${contact.email}`} className="text-primary hover:underline">{contact.email}</a></p>
-            <p>Phone: {contact.phone}</p>
-            <p>
-              LinkedIn:{" "}
-              <a href={contact.linkedin} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                {contact.linkedin}
-              </a>
-            </p>
-            <p>Location: {contact.location}</p>
-          </section>
-
-          {/* Skills Section */}
-          <section className="mb-6 slide-in-left">
-            <h2 className="text-lg font-semibold text-primary">Core Skills</h2>
-            <ul className="list-disc pl-5 text-muted">
-              {skills.map((skill, index) => (
-                <li key={index} className="slide-in-left" style={{ animationDelay: `${index * 0.2}s` }}>
-                  {skill}
-                </li>
-              ))}
+          <section className="mb-6">
+            <h2 className="text-primary text-2xl font-heading mb-4">Contact</h2>
+            <ul className="list-none">
+              <li className="text-muted">
+                Email:{" "}
+                <a href={`mailto:${contact.email}`} className="text-primary hover:text-highlight">
+                  {contact.email}
+                </a>
+              </li>
+              <li className="text-muted">Phone: {contact.phone}</li>
+              <li className="text-muted">
+                LinkedIn:{" "}
+                <a
+                  href={contact.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:text-highlight"
+                >
+                  {contact.linkedin}
+                </a>
+              </li>
+              <li className="text-muted">Location: {contact.location}</li>
             </ul>
           </section>
 
           {/* Projects Section */}
-          <section className="mb-6 slide-in-left">
-            <h2 className="text-lg font-semibold text-primary">Projects</h2>
-            <ul className="list-disc pl-5 text-muted">
+          <section className="mb-6">
+            <h2 className="text-primary text-2xl font-heading mb-4">Projects</h2>
+            <ul className="list-disc pl-6">
               {projects.map((project, index) => (
-                <li
-                  key={project.name}
-                  className="mb-2 slide-in-left"
-                  style={{ animationDelay: `${index * 0.2}s` }}
-                >
+                <li key={index} className="mb-4">
                   <a
                     href={project.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-primary hover:underline"
+                    className="text-primary font-semibold hover:text-highlight"
                   >
                     {project.name}
                   </a>
-                  <p>{project.description}</p>
-                </li>
-              ))}
-            </ul>
-          </section>
-
-          {/* Certificates Section */}
-          <section className="mb-6 slide-in-left">
-            <h2 className="text-lg font-semibold text-primary">Certificates</h2>
-            <ul className="list-disc pl-5 text-muted">
-              {certificates.map((certificate, index) => (
-                <li key={index} className="slide-in-left" style={{ animationDelay: `${index * 0.2}s` }}>
-                  {certificate}
+                  <p className="text-muted">{project.description}</p>
                 </li>
               ))}
             </ul>
           </section>
 
           {/* Render Children */}
-          <div className="fade-in">{children}</div>
+          <div>{children}</div>
         </div>
       </body>
     </html>
