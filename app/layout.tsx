@@ -38,9 +38,7 @@ export default function RootLayout({
           <section className="mb-6">
             <h2 className="text-primary text-2xl font-heading mb-4">About Me</h2>
             <p className="text-muted">
-              As an innovative technology professional, I specialize in developing cutting-edge solutions at the intersection of 
-              artificial intelligence and software development. My expertise spans across multiple domains, with a particular 
-              focus on creating impactful applications that solve real-world challenges.
+              I’m a tech enthusiast specializing in AI & ML, dedicated to creating practical, real-world solutions through innovative software and machine learning techniques. As a BTech student in Computer Science, I focus on AI-driven projects and actively contribute to IEEE initiatives at my college.
             </p>
           </section>
 
@@ -85,9 +83,8 @@ export default function RootLayout({
                   AI-based Automated Defective Exhibit Identification System for Galleries | Hyderabad, Telangana, India
                 </p>
                 <ul className="list-disc pl-6 text-muted">
-                  <li>Implemented an AI-powered system using TensorFlow and MobileNetV3.</li>
-                  <li>Developed a web application with Flask and integrated Flutter for mobile devices.</li>
-                  <li>Achieved an F1 score of 0.9893 through model ensembling.</li>
+                  <li>Built AI-based system using TensorFlow and MobileNetV3.</li>
+                  <li>Integrated Flask for web app and Flutter for mobile interfaces.</li>
                 </ul>
                 <p className="text-muted">Jul 2024 - Oct 2024</p>
               </div>
@@ -108,7 +105,7 @@ export default function RootLayout({
                   AI-based Defect Detection
                 </a>
                 <p className="text-muted">
-                  Deep learning-based defect detection using MobileNetV3Large and InceptionV3, achieving an F1 score of 0.9893.
+                  Developed a deep learning system using MobileNetV3, achieving high accuracy.
                 </p>
               </li>
               <li>
@@ -121,7 +118,7 @@ export default function RootLayout({
                   Chatbot Project
                 </a>
                 <p className="text-muted">
-                  Custom chatbot using Langchain, Flask, and FAISS for efficient course search capabilities.
+                  Built a chatbot using Langchain and Flask for course search functionalities.
                 </p>
               </li>
               <li>
@@ -134,7 +131,7 @@ export default function RootLayout({
                   Weather Monitoring System
                 </a>
                 <p className="text-muted">
-                  Real-time weather data fetching system using OpenWeatherMap API.
+                  Real-time weather data fetch from OpenWeatherMap API.
                 </p>
               </li>
             </ul>
@@ -144,15 +141,22 @@ export default function RootLayout({
           <section className="mb-6">
             <h2 className="text-primary text-2xl font-heading mb-4">Education</h2>
             <p className="text-muted">
-              <strong>CMR Engineering College</strong> - Bachelor of Technology in Artificial Intelligence and Machine Learning 
-              (GPA: 7.4) | Nov 2022 - Sep 2026
+              <strong>CMR Engineering College</strong> - BTech in AI & ML (GPA: 7.4) | Nov 2022 - Sep 2026
             </p>
             <p className="text-muted">
-              <strong>AWS Academy Graduate:</strong> Cloud Foundations & Machine Learning Foundations
+              <strong>Certifications:</strong> AWS Cloud Foundations, Machine Learning Foundations (AWS Academy)
             </p>
-            <p className="text-muted">
-              <strong>Coursera:</strong> Programming for Everybody (Python)
-            </p>
+          </section>
+
+          {/* Core Skills */}
+          <section className="mb-6">
+            <h2 className="text-primary text-2xl font-heading mb-4">Core Skills</h2>
+            <ul className="list-none space-y-2 text-muted">
+              <li>C, C++, Python</li>
+              <li>AI/ML, TensorFlow, Flask</li>
+              <li>Web Scraping, Data Processing</li>
+              <li>API Development, OOP</li>
+            </ul>
           </section>
 
           {/* Render Children */}
