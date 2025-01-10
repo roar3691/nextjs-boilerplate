@@ -1,168 +1,101 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import React from 'react';
+import Image from 'next/image';
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const Layout = () => {
+  return (
+    <div className="min-h-screen bg-background text-foreground">
+      {/* Hero Section */}
+      <section className="flex flex-col justify-center items-center py-16 px-8 text-center">
+        <Image src="/profile.jpg" alt="Profile" width={150} height={150} className="rounded-full" />
+        <h1 className="text-4xl font-heading mt-6">Hello, I'm Yanala Raghuvamshi Reddy</h1>
+        <p className="text-xl font-body mt-2">3rd Year BTech in CSE | AI & ML Enthusiast</p>
+      </section>
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+      {/* About Section */}
+      <section className="py-16 px-8 bg-gray-100">
+        <h2 className="text-3xl font-heading text-center">About Me</h2>
+        <p className="text-lg mt-4 max-w-3xl mx-auto text-muted">
+          I am passionate about technology, especially in the fields of Artificial Intelligence and Machine Learning. With a keen interest in building innovative solutions, I strive to continuously enhance my skills and contribute to impactful projects. My academic journey at CMR Engineering College has equipped me with a strong foundation in computer science, and I am eager to apply my knowledge in real-world applications.
+        </p>
+      </section>
 
-export const metadata: Metadata = {
-  title: "Yanala Raghuvamshi Reddy's Portfolio",
-  description: "Showcasing projects, skills, and experience in AI/ML",
+      {/* Skills Section */}
+      <section className="py-16 px-8">
+        <h2 className="text-3xl font-heading text-center">Skills</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-8">
+          <div className="text-center">
+            <h3 className="text-lg font-semibold">Python</h3>
+            <div className="bg-gray-300 h-2 mt-2 rounded-full">
+              <div className="bg-primary h-2 rounded-full" style={{ width: '90%' }}></div>
+            </div>
+          </div>
+          <div className="text-center">
+            <h3 className="text-lg font-semibold">JavaScript</h3>
+            <div className="bg-gray-300 h-2 mt-2 rounded-full">
+              <div className="bg-primary h-2 rounded-full" style={{ width: '85%' }}></div>
+            </div>
+          </div>
+          <div className="text-center">
+            <h3 className="text-lg font-semibold">React</h3>
+            <div className="bg-gray-300 h-2 mt-2 rounded-full">
+              <div className="bg-primary h-2 rounded-full" style={{ width: '80%' }}></div>
+            </div>
+          </div>
+          <div className="text-center">
+            <h3 className="text-lg font-semibold">Machine Learning</h3>
+            <div className="bg-gray-300 h-2 mt-2 rounded-full">
+              <div className="bg-primary h-2 rounded-full" style={{ width: '75%' }}></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section className="py-16 px-8">
+        <h2 className="text-3xl font-heading text-center">Projects</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
+          {/* Example Project Cards */}
+          <div className="card">
+            <h3 className="text-xl font-heading">Art Image Classifier</h3>
+            <p className="text-muted mt-2">A deep learning-based image classifier for art images.</p>
+            <a href="https://github.com/roar3691/Art_image_classifier" className="btn btn-primary mt-4">View Project</a>
+          </div>
+          <div className="card">
+            <h3 className="text-xl font-heading">Chatbot</h3>
+            <p className="text-muted mt-2">An AI-powered chatbot for customer service applications.</p>
+            <a href="https://github.com/roar3691/chatbot" className="btn btn-primary mt-4">View Project</a>
+          </div>
+          <div className="card">
+            <h3 className="text-xl font-heading">AI Multi-Agent System</h3>
+            <p className="text-muted mt-2">An intelligent system using multiple agents for problem-solving.</p>
+            <a href="https://github.com/roar3691/AI-Multi-Agent-System" className="btn btn-primary mt-4">View Project</a>
+          </div>
+        </div>
+      </section>
+
+      {/* Social Links Section */}
+      <section className="py-8 bg-gray-200 text-center">
+        <h2 className="text-2xl font-heading">Connect with Me</h2>
+        <div className="mt-6">
+          <a href="https://www.linkedin.com/in/yanala-raghuvamshi-reddy-a9a831202/" className="text-2xl mx-4 text-subtle-link hover:text-highlight">
+            <FaLinkedin />
+          </a>
+          <a href="https://github.com/roar3691" className="text-2xl mx-4 text-subtle-link hover:text-highlight">
+            <FaGithub />
+          </a>
+          <a href="https://twitter.com/your-profile" className="text-2xl mx-4 text-subtle-link hover:text-highlight">
+            <FaTwitter />
+          </a>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-4 bg-background text-center">
+        <p className="text-muted">© 2025 Yanala Raghuvamshi Reddy. All Rights Reserved.</p>
+      </footer>
+    </div>
+  );
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-      <body className="font-body bg-background text-foreground transition-colors">
-        <div className="container mx-auto p-4">
-          {/* Header Section */}
-          <header className="gradient-bg text-foreground p-6 rounded-lg mb-6">
-            <h1 className="text-4xl font-heading font-bold mb-2">Yanala Raghuvamshi Reddy</h1>
-            <p className="text-muted text-lg">
-              Pursuing Computer Science AI/ML | Researcher | Treasurer, IEEE Computer Society - CMREC Student Branch
-            </p>
-          </header>
-
-          {/* About Section */}
-          <section className="mb-6">
-            <h2 className="text-primary text-2xl font-heading mb-4">About Me</h2>
-            <p className="text-muted">
-              I’m a tech enthusiast specializing in AI & ML, dedicated to creating practical, real-world solutions through innovative software and machine learning techniques. As a BTech student in Computer Science, I focus on AI-driven projects and actively contribute to IEEE initiatives at my college.
-            </p>
-          </section>
-
-          {/* Contact Section */}
-          <section className="mb-6">
-            <h2 className="text-primary text-2xl font-heading mb-4">Contact</h2>
-            <ul className="list-none">
-              <li className="text-muted">
-                Email:{" "}
-                <a href="mailto:raghu.yanala@gmail.com" className="text-primary hover:text-highlight">
-                  raghu.yanala@gmail.com
-                </a>
-              </li>
-              <li className="text-muted">Phone: 6309127542</li>
-              <li className="text-muted">
-                LinkedIn:{" "}
-                <a
-                  href="https://www.linkedin.com/in/yanala-raghuvamshi-reddy-a9a831202/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-subtle-link hover:text-highlight"
-                >
-                  LinkedIn Profile
-                </a>
-              </li>
-              <li className="text-muted">Location: Hyderabad, Telangana</li>
-            </ul>
-          </section>
-
-          {/* Work Experience */}
-          <section className="mb-6">
-            <h2 className="text-primary text-2xl font-heading mb-4">Work Experience</h2>
-            <div className="space-y-4">
-              <div>
-                <h3 className="text-secondary font-semibold">Treasurer</h3>
-                <p className="text-muted">IEEE Computer Society - CMREC Student Branch | Hyderabad, Telangana, India</p>
-                <p className="text-muted">Jun 2024 - Present</p>
-              </div>
-              <div>
-                <h3 className="text-secondary font-semibold">Machine Learning Engineer</h3>
-                <p className="text-muted">
-                  AI-based Automated Defective Exhibit Identification System for Galleries | Hyderabad, Telangana, India
-                </p>
-                <ul className="list-disc pl-6 text-muted">
-                  <li>Built AI-based system using TensorFlow and MobileNetV3.</li>
-                  <li>Integrated Flask for web app and Flutter for mobile interfaces.</li>
-                </ul>
-                <p className="text-muted">Jul 2024 - Oct 2024</p>
-              </div>
-            </div>
-          </section>
-
-          {/* Projects */}
-          <section className="mb-6">
-            <h2 className="text-primary text-2xl font-heading mb-4">Projects</h2>
-            <ul className="list-disc pl-6">
-              <li>
-                <a
-                  href="https://github.com/roar3691/Art_image_classifier"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-subtle-link hover:text-highlight"
-                >
-                  AI-based Defect Detection
-                </a>
-                <p className="text-muted">
-                  Developed a deep learning system using MobileNetV3, achieving high accuracy.
-                </p>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/roar3691/chatbot"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-subtle-link hover:text-highlight"
-                >
-                  Chatbot Project
-                </a>
-                <p className="text-muted">
-                  Built a chatbot using Langchain and Flask for course search functionalities.
-                </p>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/roar3691/weather-monitoring-system"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-subtle-link hover:text-highlight"
-                >
-                  Weather Monitoring System
-                </a>
-                <p className="text-muted">
-                  Real-time weather data fetch from OpenWeatherMap API.
-                </p>
-              </li>
-            </ul>
-          </section>
-
-          {/* Education */}
-          <section className="mb-6">
-            <h2 className="text-primary text-2xl font-heading mb-4">Education</h2>
-            <p className="text-muted">
-              <strong>CMR Engineering College</strong> - BTech in AI & ML (GPA: 7.4) | Nov 2022 - Sep 2026
-            </p>
-            <p className="text-muted">
-              <strong>Certifications:</strong> AWS Cloud Foundations, Machine Learning Foundations (AWS Academy)
-            </p>
-          </section>
-
-          {/* Core Skills */}
-          <section className="mb-6">
-            <h2 className="text-primary text-2xl font-heading mb-4">Core Skills</h2>
-            <ul className="list-none space-y-2 text-muted">
-              <li>C, C++, Python</li>
-              <li>AI/ML, TensorFlow, Flask</li>
-              <li>Web Scraping, Data Processing</li>
-              <li>API Development, OOP</li>
-            </ul>
-          </section>
-
-          {/* Render Children */}
-          <div>{children}</div>
-        </div>
-      </body>
-    </html>
-  );
-}
+export default Layout;
