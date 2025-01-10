@@ -55,7 +55,6 @@ const Layout = () => {
       <section className="py-16 px-8">
         <h2 className="text-3xl font-heading text-center">Projects</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
-          {/* Example Project Cards */}
           <div className="card">
             <h3 className="text-xl font-heading">Art Image Classifier</h3>
             <p className="text-muted mt-2">A deep learning-based image classifier for art images.</p>
