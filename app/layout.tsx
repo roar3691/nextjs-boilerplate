@@ -22,74 +22,126 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const personalInfo = {
+    email: "raghu.yanala@gmail.com",
+    linkedin: "https://www.linkedin.com/in/yanala-raghuvamshi-reddy-a9a831202",
+    phone: "6309127542",
+    location: "Hyderabad, Telangana",
+  };
+
+  const aboutMe = `
+    As an innovative technology professional, I specialize in developing cutting-edge solutions at the intersection of 
+    artificial intelligence and software development. My expertise spans multiple domains, focusing on creating impactful 
+    applications that solve real-world challenges.
+  `;
+
   const projects = [
     {
       name: "AI-based Defect Detection",
       href: "https://github.com/roar3691/Art_image_classifier",
-      description: "An ensemble model using MobileNetV3Large and InceptionV3 achieving an F1 score of 0.9893.",
+      description:
+        "An ensemble model using MobileNetV3Large and InceptionV3 achieving an F1 score of 0.9893.",
     },
     {
       name: "Weather Monitoring System",
       href: "https://github.com/roar3691/weather-monitoring-system",
-      description: "Real-time weather data fetching for major Indian cities using OpenWeatherMap API.",
+      description:
+        "Real-time weather data fetching for major Indian cities using OpenWeatherMap API.",
     },
     {
       name: "Custom Chatbot",
       href: "https://github.com/roar3691/chatbot",
-      description: "Built using Langchain, extracts course information, creates embeddings, and provides a RESTful API via Flask.",
+      description:
+        "Built using Langchain, extracts course information, creates embeddings, and provides a RESTful API via Flask.",
     },
     {
       name: "Rule Engine Application",
       href: "https://github.com/roar3691/RuleEngine-AST",
-      description: "Uses SQLite for storing rules and Flask for a web interface.",
+      description:
+        "Uses SQLite for storing rules and Flask for a web interface.",
+    },
+  ];
+
+  const workExperience = [
+    {
+      title: "Treasurer",
+      organization: "IEEE Computer Society - CMREC Student Branch",
+      location: "Hyderabad, Telangana",
+      date: "Jun 2024 - Present",
+    },
+    {
+      title: "Machine Learning Engineer (Project Hackathon)",
+      organization:
+        "AI-based Automated Defective Exhibit Identification System for Galleries",
+      date: "Jul 2024 - Oct 2024",
+      description:
+        "Implemented an AI-powered system using TensorFlow and MobileNetV3 to classify defective exhibits in galleries.",
+    },
+    {
+      title: "Event Coordinator",
+      organization: "Smart India Hackathon",
+      date: "Jul 2024 - Aug 2024",
+      description:
+        "Coordinated events, managed schedules, and facilitated communication between participants and stakeholders.",
     },
   ];
 
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased gradient-bg`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <div className="container mx-auto p-4">
-          {/* Header Section */}
-          <header className="fade-in">
-            <h1 className="text-2xl font-bold">RAGHUVAMSHI REDDY</h1>
-            <p className="text-sm text-gray-600 mb-4">AI/ML Enthusiast</p>
+          {/* Header */}
+          <header className="mb-8">
+            <h1 className="text-4xl font-bold text-primary">Yanala Raghuvamshi Reddy</h1>
+            <p className="text-lg text-muted">
+              Pursuing BTech in Computer Science (AI & ML) | Researcher | Treasurer - IEEE
+            </p>
           </header>
 
-          {/* About Section */}
-          <section className="mb-4 slide-in-left">
-            <h2 className="text-lg font-semibold">ABOUT ME</h2>
-            <p>
-              I am passionate about harnessing the power of AI and Machine Learning to solve real-world problems.
-              My focus areas include computer vision, natural language processing, and data analytics.
-            </p>
+          {/* About Me */}
+          <section className="mb-8">
+            <h2 className="text-xl font-semibold text-secondary">About Me</h2>
+            <p className="text-body">{aboutMe}</p>
           </section>
 
-          {/* Contact Section */}
-          <section className="mb-4 slide-in-left">
-            <h2 className="text-lg font-semibold">CONTACT</h2>
-            <p>
-              Email:{" "}
-              <a href="mailto:raghu.yanala@gmail.com" className="text-blue-600 hover:underline">
-                raghu.yanala@gmail.com
-              </a>
-            </p>
+          {/* Contact */}
+          <section className="mb-8">
+            <h2 className="text-xl font-semibold text-secondary">Contact</h2>
+            <ul className="text-body">
+              <li>Email: <a href={`mailto:${personalInfo.email}`} className="text-primary hover:underline">{personalInfo.email}</a></li>
+              <li>Phone: {personalInfo.phone}</li>
+              <li>LinkedIn: <a href={personalInfo.linkedin} className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">{personalInfo.linkedin}</a></li>
+              <li>Portfolio: <a href={personalInfo.website} className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">{personalInfo.website}</a></li>
+              <li>Location: {personalInfo.location}</li>
+            </ul>
           </section>
 
-          {/* Projects Section */}
-          <section className="slide-in-left">
-            <h2 className="text-lg font-semibold">PROJECTS</h2>
+          {/* Work Experience */}
+          <section className="mb-8">
+            <h2 className="text-xl font-semibold text-secondary">Work Experience</h2>
+            <ul className="list-disc pl-5">
+              {workExperience.map((work, index) => (
+                <li key={index}>
+                  <h3 className="text-lg font-bold text-primary">{work.title}</h3>
+                  <p className="text-muted">{work.organization}</p>
+                  <p>{work.date}</p>
+                  <p>{work.description}</p>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          {/* Projects */}
+          <section>
+            <h2 className="text-xl font-semibold text-secondary">Projects</h2>
             <ul className="list-disc pl-5">
               {projects.map((project, index) => (
-                <li
-                  key={project.name}
-                  className={index > 0 ? "slide-in-left" : ""}
-                  style={{ animationDelay: `${index * 0.2}s` }}
-                >
+                <li key={index}>
                   <a
                     href={project.href}
+                    className="text-primary hover:underline"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-600 hover:underline"
                   >
                     {project.name}
                   </a>
@@ -99,8 +151,8 @@ export default function RootLayout({
             </ul>
           </section>
 
-          {/* Render Children */}
-          <div className="fade-in">{children}</div>
+          {/* Children */}
+          <div>{children}</div>
         </div>
       </body>
     </html>
