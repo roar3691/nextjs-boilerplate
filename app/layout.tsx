@@ -120,6 +120,9 @@ export default function RootLayout({
               </ul>
             </section>
 
+            {/* Inject children here */}
+            <div className="children-container mt-12">{children}</div>
+
             {/* Footer Section */}
             <footer className="text-center mt-16">
               <p className="text-gray-400 text-sm">
