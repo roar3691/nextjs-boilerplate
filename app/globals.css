@@ -2,28 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Root Variables: Define a professional color palette */
+/* Radix Colors: Professional Color Palette */
 :root {
-  --background: #ffffff; /* Neutral white background */
-  --foreground: #212529; /* Dark gray for text */
-  --primary: #0056b3; /* Professional dark blue */
-  --secondary: #ffc107; /* Gold for accents */
-  --accent: #28a745; /* Vibrant green for highlights */
-  --highlight: #dc3545; /* Bright red for alerts or important actions */
-  --text-muted: #6c757d; /* Muted gray for secondary text */
-  --border-color: #dee2e6; /* Subtle gray for borders */
+  --background: hsl(210, 16%, 98%); /* Neutral white */
+  --foreground: hsl(222, 47%, 11%); /* Dark gray for text */
+  --primary: hsl(215, 85%, 57%); /* Professional dark blue */
+  --primary-hover: hsl(215, 90%, 52%); /* Hover state for primary */
+  --secondary: hsl(42, 90%, 51%); /* Gold for accents */
+  --accent: hsl(134, 61%, 41%); /* Vibrant green for highlights */
+  --accent-hover: hsl(134, 65%, 36%); /* Hover state for accent */
+  --highlight: hsl(348, 83%, 47%); /* Bright red for alerts */
+  --highlight-hover: hsl(348, 87%, 42%); /* Hover state for highlight */
+  --text-muted: hsl(222, 15%, 60%); /* Muted gray for secondary text */
+  --border-color: hsl(210, 16%, 90%); /* Subtle gray for borders */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #181a1b; /* Dark gray for background */
-    --foreground: #e9ecef; /* Light gray for text */
-    --primary: #3399ff; /* Brighter blue for dark mode */
-    --secondary: #ffce54; /* Softer gold */
-    --accent: #51cf66; /* Light green */
-    --highlight: #ff6b6b; /* Soft red */
-    --text-muted: #ced4da; /* Lighter muted gray */
-    --border-color: #343a40; /* Darker gray for borders */
+    --background: hsl(222, 47%, 11%); /* Dark gray background */
+    --foreground: hsl(210, 16%, 98%); /* Light gray for text */
+    --primary: hsl(215, 75%, 64%); /* Brighter blue */
+    --primary-hover: hsl(215, 80%, 59%); /* Hover state for dark mode */
+    --secondary: hsl(42, 80%, 61%); /* Softer gold */
+    --accent: hsl(134, 50%, 51%); /* Softer green */
+    --accent-hover: hsl(134, 55%, 46%); /* Hover state for accent in dark mode */
+    --highlight: hsl(348, 73%, 57%); /* Softer red */
+    --highlight-hover: hsl(348, 78%, 52%); /* Hover state for highlight */
+    --text-muted: hsl(222, 20%, 70%); /* Muted gray */
+    --border-color: hsl(222, 27%, 18%); /* Darker gray for borders */
   }
 }
 
@@ -31,7 +37,7 @@
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -40,7 +46,7 @@ body {
 .gradient-bg {
   background: linear-gradient(135deg, var(--primary), var(--secondary));
   background-size: 300% 300%;
-  animation: gradientAnimation 10s ease infinite;
+  animation: gradientAnimation 8s ease infinite;
 }
 
 @keyframes gradientAnimation {
@@ -116,54 +122,53 @@ body {
 
 .btn-primary {
   background-color: var(--primary);
-  color: #fff;
+  color: var(--foreground);
   border-color: var(--primary);
 }
 
 .btn-primary:hover {
-  background-color: darken(var(--primary), 10%);
-  border-color: darken(var(--primary), 10%);
-}
-
-.btn-secondary {
-  background-color: var(--secondary);
-  color: #fff;
-  border-color: var(--secondary);
-}
-
-.btn-secondary:hover {
-  background-color: darken(var(--secondary), 10%);
-  border-color: darken(var(--secondary), 10%);
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
 }
 
 .btn-accent {
   background-color: var(--accent);
-  color: #fff;
+  color: var(--foreground);
   border-color: var(--accent);
 }
 
 .btn-accent:hover {
-  background-color: darken(var(--accent), 10%);
-  border-color: darken(var(--accent), 10%);
+  background-color: var(--accent-hover);
+  border-color: var(--accent-hover);
 }
 
-/* Utility Classes */
-.shadow-card {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+.btn-highlight {
+  background-color: var(--highlight);
+  color: var(--foreground);
+  border-color: var(--highlight);
 }
 
+.btn-highlight:hover {
+  background-color: var(--highlight-hover);
+  border-color: var(--highlight-hover);
+}
+
+/* Cards */
 .card {
   background-color: var(--background);
   border: 1px solid var(--border-color);
   border-radius: 0.5rem;
   padding: 1rem;
-  transition: box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .card:hover {
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
 }
 
+/* Lists */
 .list-item {
   color: var(--foreground);
   margin-bottom: 0.5rem;
