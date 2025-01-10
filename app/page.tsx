@@ -4,7 +4,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="text-center">
         <h1 className="text-5xl font-bold text-primary mb-4">
-          Hi, I'm Yanala Raghuvamshi Reddy
+          Hi, I&apos;m Yanala Raghuvamshi Reddy
         </h1>
         <p className="text-lg text-muted max-w-2xl mb-8">
           A passionate AI/ML enthusiast with expertise in software development and research. Building solutions to solve real-world problems with innovation and technology.
