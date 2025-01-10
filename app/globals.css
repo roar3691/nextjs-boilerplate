@@ -4,34 +4,35 @@
 
 /* Radix Colors: Professional Color Palette */
 :root {
-  --background: hsl(210, 16%, 98%); /* Neutral white */
-  --foreground: hsl(222, 47%, 11%); /* Dark gray for text */
-  --primary: hsl(215, 85%, 57%); /* Professional dark blue */
-  --primary-hover: hsl(215, 90%, 52%); /* Hover state for primary */
-  --secondary: hsl(42, 90%, 51%); /* Gold for accents */
-  --accent: hsl(134, 61%, 41%); /* Vibrant green for highlights */
-  --accent-hover: hsl(134, 65%, 36%); /* Hover state for accent */
-  --highlight: hsl(348, 83%, 47%); /* Bright red for alerts */
-  --highlight-hover: hsl(348, 87%, 42%); /* Hover state for highlight */
-  --text-muted: hsl(222, 15%, 60%); /* Muted gray for secondary text */
-  --border-color: hsl(210, 16%, 90%); /* Subtle gray for borders */
-  --subtle-link: hsl(215, 55%, 50%); /* Soft muted blue for links */
+  --background: hsl(210, 16%, 98%);
+  --foreground: hsl(222, 47%, 11%);
+  --primary: hsl(215, 85%, 57%);
+  --primary-hover: hsl(215, 90%, 52%);
+  --secondary: hsl(42, 90%, 51%);
+  --accent: hsl(134, 61%, 41%);
+  --accent-hover: hsl(134, 65%, 36%);
+  --highlight: hsl(348, 83%, 47%);
+  --highlight-hover: hsl(348, 87%, 42%);
+  --text-muted: hsl(222, 15%, 60%);
+  --border-color: hsl(210, 16%, 90%);
+  --subtle-link: hsl(215, 55%, 50%);
 }
 
+/* Dark Mode Settings */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: hsl(222, 47%, 11%); /* Dark gray background */
-    --foreground: hsl(210, 16%, 98%); /* Light gray for text */
-    --primary: hsl(215, 75%, 64%); /* Brighter blue */
-    --primary-hover: hsl(215, 80%, 59%); /* Hover state for dark mode */
-    --secondary: hsl(42, 80%, 61%); /* Softer gold */
-    --accent: hsl(134, 50%, 51%); /* Softer green */
-    --accent-hover: hsl(134, 55%, 46%); /* Hover state for accent in dark mode */
-    --highlight: hsl(348, 73%, 57%); /* Softer red */
-    --highlight-hover: hsl(348, 78%, 52%); /* Hover state for highlight */
-    --text-muted: hsl(222, 20%, 70%); /* Muted gray */
-    --border-color: hsl(222, 27%, 18%); /* Darker gray for borders */
-    --subtle-link: hsl(215, 60%, 50%); /* Darker subtle blue for dark mode */
+    --background: hsl(222, 47%, 11%);
+    --foreground: hsl(210, 16%, 98%);
+    --primary: hsl(215, 75%, 64%);
+    --primary-hover: hsl(215, 80%, 59%);
+    --secondary: hsl(42, 80%, 61%);
+    --accent: hsl(134, 50%, 51%);
+    --accent-hover: hsl(134, 55%, 46%);
+    --highlight: hsl(348, 73%, 57%);
+    --highlight-hover: hsl(348, 78%, 52%);
+    --text-muted: hsl(222, 20%, 70%);
+    --border-color: hsl(222, 27%, 18%);
+    --subtle-link: hsl(215, 60%, 50%);
   }
 }
 
@@ -44,90 +45,16 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Typography */
-.text-primary {
-  color: var(--primary);
-}
+.text-primary { color: var(--primary); }
+.text-secondary { color: var(--secondary); }
+.text-accent { color: var(--accent); }
+.text-highlight { color: var(--highlight); }
+.text-muted { color: var(--text-muted); }
 
-.text-secondary {
-  color: var(--secondary);
-}
+.font-heading { font-family: 'Poppins', sans-serif; font-weight: 600; }
+.font-body { font-family: 'Roboto', sans-serif; }
 
-.text-accent {
-  color: var(--accent);
-}
-
-.text-highlight {
-  color: var(--highlight);
-}
-
-.text-muted {
-  color: var(--text-muted);
-}
-
-.font-heading {
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
-  font-weight: 600;
-}
-
-.font-body {
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
-}
-
-/* Components */
-.card {
-  background-color: var(--background);
-  border: 1px solid var(--border-color);
-  border-radius: 0.5rem;
-  padding: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.card:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  transform: translateY(-4px);
-}
-
-.btn {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  font-weight: 500;
-  text-align: center;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.btn-primary {
-  background-color: var(--primary);
-  color: var(--foreground);
-}
-
-.btn-primary:hover {
-  background-color: var(--primary-hover);
-}
-
-.btn-accent {
-  background-color: var(--accent);
-  color: var(--foreground);
-}
-
-.btn-accent:hover {
-  background-color: var(--accent-hover);
-}
-
-.btn-highlight {
-  background-color: var(--highlight);
-  color: var(--foreground);
-}
-
-.btn-highlight:hover {
-  background-color: var(--highlight-hover);
-}
-
-/* Link styles */
+/* Custom Link Styling */
 a {
   text-decoration: none;
   color: var(--subtle-link);
@@ -142,3 +69,33 @@ a:focus {
   outline: 2px solid var(--highlight);
   outline-offset: 2px;
 }
+
+/* Card Styling */
+.card {
+  background-color: var(--background);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
+}
+
+/* Button Styling */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary { background-color: var(--primary); color: var(--foreground); }
+.btn-primary:hover { background-color: var(--primary-hover); }
