@@ -1,100 +1,134 @@
-import React from 'react';
-import Image from 'next/image';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
 
-const Layout = () => {
-  return (
-    <div className="min-h-screen bg-background text-foreground">
-      {/* Hero Section */}
-      <section className="flex flex-col justify-center items-center py-16 px-8 text-center">
-        <Image src="/profile.jpg" alt="Profile" width={150} height={150} className="rounded-full" />
-        <h1 className="text-4xl font-heading mt-6">Hello, I'm Yanala Raghuvamshi Reddy</h1>
-        <p className="text-xl font-body mt-2">3rd Year BTech in CSE | AI & ML Enthusiast</p>
-      </section>
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
 
-      {/* About Section */}
-      <section className="py-16 px-8 bg-gray-100">
-        <h2 className="text-3xl font-heading text-center">About Me</h2>
-        <p className="text-lg mt-4 max-w-3xl mx-auto text-muted">
-          I am passionate about technology, especially in the fields of Artificial Intelligence and Machine Learning. With a keen interest in building innovative solutions, I strive to continuously enhance my skills and contribute to impactful projects. My academic journey at CMR Engineering College has equipped me with a strong foundation in computer science, and I am eager to apply my knowledge in real-world applications.
-        </p>
-      </section>
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
-      {/* Skills Section */}
-      <section className="py-16 px-8">
-        <h2 className="text-3xl font-heading text-center">Skills</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-8">
-          <div className="text-center">
-            <h3 className="text-lg font-semibold">Python</h3>
-            <div className="bg-gray-300 h-2 mt-2 rounded-full">
-              <div className="bg-primary h-2 rounded-full" style={{ width: '90%' }}></div>
-            </div>
-          </div>
-          <div className="text-center">
-            <h3 className="text-lg font-semibold">JavaScript</h3>
-            <div className="bg-gray-300 h-2 mt-2 rounded-full">
-              <div className="bg-primary h-2 rounded-full" style={{ width: '85%' }}></div>
-            </div>
-          </div>
-          <div className="text-center">
-            <h3 className="text-lg font-semibold">React</h3>
-            <div className="bg-gray-300 h-2 mt-2 rounded-full">
-              <div className="bg-primary h-2 rounded-full" style={{ width: '80%' }}></div>
-            </div>
-          </div>
-          <div className="text-center">
-            <h3 className="text-lg font-semibold">Machine Learning</h3>
-            <div className="bg-gray-300 h-2 mt-2 rounded-full">
-              <div className="bg-primary h-2 rounded-full" style={{ width: '75%' }}></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Projects Section */}
-      <section className="py-16 px-8">
-        <h2 className="text-3xl font-heading text-center">Projects</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
-          <div className="card">
-            <h3 className="text-xl font-heading">Art Image Classifier</h3>
-            <p className="text-muted mt-2">A deep learning-based image classifier for art images.</p>
-            <a href="https://github.com/roar3691/Art_image_classifier" className="btn btn-primary mt-4">View Project</a>
-          </div>
-          <div className="card">
-            <h3 className="text-xl font-heading">Chatbot</h3>
-            <p className="text-muted mt-2">An AI-powered chatbot for customer service applications.</p>
-            <a href="https://github.com/roar3691/chatbot" className="btn btn-primary mt-4">View Project</a>
-          </div>
-          <div className="card">
-            <h3 className="text-xl font-heading">AI Multi-Agent System</h3>
-            <p className="text-muted mt-2">An intelligent system using multiple agents for problem-solving.</p>
-            <a href="https://github.com/roar3691/AI-Multi-Agent-System" className="btn btn-primary mt-4">View Project</a>
-          </div>
-        </div>
-      </section>
-
-      {/* Social Links Section */}
-      <section className="py-8 bg-gray-200 text-center">
-        <h2 className="text-2xl font-heading">Connect with Me</h2>
-        <div className="mt-6">
-          <a href="https://www.linkedin.com/in/yanala-raghuvamshi-reddy-a9a831202/" className="text-2xl mx-4 text-subtle-link hover:text-highlight">
-            <FaLinkedin />
-          </a>
-          <a href="https://github.com/roar3691" className="text-2xl mx-4 text-subtle-link hover:text-highlight">
-            <FaGithub />
-          </a>
-          <a href="https://twitter.com/your-profile" className="text-2xl mx-4 text-subtle-link hover:text-highlight">
-            <FaTwitter />
-          </a>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="py-4 bg-background text-center">
-        <p className="text-muted">© 2025 Yanala Raghuvamshi Reddy. All Rights Reserved.</p>
-      </footer>
-    </div>
-  );
+export const metadata: Metadata = {
+  title: "Yanala Raghuvamshi Reddy's Portfolio",
+  description: "Showcasing projects, skills, and experience in AI/ML",
 };
 
-export default Layout;
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className="font-body bg-gray-900 text-gray-100 transition-colors">
+        <div className="container mx-auto max-w-4xl p-4">
+          {/* Header Section */}
+          <header className="text-center py-10">
+            <h1 className="text-5xl font-bold text-white">Yanala Raghuvamshi Reddy</h1>
+            <p className="text-lg text-gray-400 mt-4">
+              Pursuing Computer Science AI/ML | Researcher | Treasurer, IEEE Computer Society - CMREC Student Branch
+            </p>
+          </header>
+
+          <main>
+            {/* About Section */}
+            <section className="my-12">
+              <h2 className="text-3xl font-semibold text-primary mb-4">About Me</h2>
+              <p className="text-gray-300 leading-relaxed">
+                I’m a tech enthusiast specializing in AI & ML, dedicated to creating practical, real-world solutions
+                through innovative software and machine learning techniques. As a BTech student in Computer Science, I
+                focus on AI-driven projects and actively contribute to IEEE initiatives at my college.
+              </p>
+            </section>
+
+            {/* Projects Section */}
+            <section className="my-12">
+              <h2 className="text-3xl font-semibold text-primary mb-4">Projects</h2>
+              <ul className="space-y-6">
+                <li>
+                  <a
+                    href="https://github.com/roar3691/Art_image_classifier"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline"
+                  >
+                    AI-based Defect Detection
+                  </a>
+                  <p className="text-gray-400">
+                    Developed a deep learning system using MobileNetV3, achieving high accuracy.
+                  </p>
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/roar3691/chatbot"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline"
+                  >
+                    Chatbot Project
+                  </a>
+                  <p className="text-gray-400">
+                    Built a chatbot using Langchain and Flask for course search functionalities.
+                  </p>
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/roar3691/weather-monitoring-system"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline"
+                  >
+                    Weather Monitoring System
+                  </a>
+                  <p className="text-gray-400">
+                    Real-time weather data fetch from OpenWeatherMap API.
+                  </p>
+                </li>
+              </ul>
+            </section>
+
+            {/* Contact Section */}
+            <section className="my-12">
+              <h2 className="text-3xl font-semibold text-primary mb-4">Contact</h2>
+              <ul className="space-y-2">
+                <li>
+                  Email:{" "}
+                  <a
+                    href="mailto:raghu.yanala@gmail.com"
+                    className="text-primary hover:underline"
+                  >
+                    raghu.yanala@gmail.com
+                  </a>
+                </li>
+                <li>Phone: 6309127542</li>
+                <li>
+                  LinkedIn:{" "}
+                  <a
+                    href="https://www.linkedin.com/in/yanala-raghuvamshi-reddy-a9a831202/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline"
+                  >
+                    LinkedIn Profile
+                  </a>
+                </li>
+                <li>Location: Hyderabad, Telangana</li>
+              </ul>
+            </section>
+
+            {/* Footer Section */}
+            <footer className="text-center mt-16">
+              <p className="text-gray-400 text-sm">
+                © {new Date().getFullYear()} Yanala Raghuvamshi Reddy. All rights reserved.
+              </p>
+            </footer>
+          </main>
+        </div>
+      </body>
+    </html>
+  );
+}
