@@ -1,57 +1,139 @@
-/* Base Tailwind Directives */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Light Mode Colors */
+/* Radix Colors: Professional Color Palette */
 :root {
-  --background: hsl(210, 16%, 98%);
-  --foreground: hsl(222, 47%, 11%);
-  --primary: hsl(215, 85%, 57%);
-  --primary-hover: hsl(215, 90%, 52%);
+  --background: hsl(210, 16%, 98%); /* Neutral white */
+  --foreground: hsl(222, 47%, 11%); /* Dark gray for text */
+  --primary: hsl(215, 85%, 57%); /* Professional dark blue */
+  --primary-hover: hsl(215, 90%, 52%); /* Hover state for primary */
+  --secondary: hsl(42, 90%, 51%); /* Gold for accents */
+  --accent: hsl(134, 61%, 41%); /* Vibrant green for highlights */
+  --accent-hover: hsl(134, 65%, 36%); /* Hover state for accent */
+  --highlight: hsl(348, 83%, 47%); /* Bright red for alerts */
+  --highlight-hover: hsl(348, 87%, 42%); /* Hover state for highlight */
+  --text-muted: hsl(222, 15%, 60%); /* Muted gray for secondary text */
+  --border-color: hsl(210, 16%, 90%); /* Subtle gray for borders */
+  --subtle-link: hsl(215, 55%, 50%); /* Soft muted blue for links */
+  
+  /* GitHub Button */
   --github-bg: #000000; /* GitHub Black */
   --github-hover: #333333; /* Darker Gray */
-  --linkedin-bg: #0077B5; /* Official LinkedIn Blue */
+  
+  /* LinkedIn Button */
+  --linkedin-bg: #0077B5; /* LinkedIn Blue */
   --linkedin-hover: #005582; /* Darker LinkedIn Blue */
-  --resume-bg: #f7ca4d; /* Bright Yellow */
-  --resume-hover: #cfa12f; /* Deeper Yellow */
-  --text-muted: hsl(222, 15%, 60%);
-  --border-color: hsl(210, 16%, 90%);
-  --highlight: hsl(348, 83%, 47%);
-  --highlight-hover: hsl(348, 87%, 42%);
-  --link: hsl(215, 75%, 55%);
 }
 
-/* Dark Mode Colors */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: hsl(222, 47%, 11%);
-    --foreground: hsl(210, 16%, 98%);
-    --primary: hsl(215, 75%, 64%);
-    --primary-hover: hsl(215, 80%, 59%);
-    --github-bg: #f0f6fc; /* GitHub Lighter Gray */
-    --github-hover: #d0d7de; /* Lighter Hover Gray */
-    --linkedin-bg: #0077B5; /* Official LinkedIn Blue */
-    --linkedin-hover: #005582; /* Darker LinkedIn Blue */
-    --resume-bg: #f7ca4d; /* Bright Yellow */
-    --resume-hover: #cfa12f; /* Deeper Yellow */
-    --text-muted: hsl(222, 20%, 70%);
-    --border-color: hsl(222, 27%, 18%);
-    --highlight: hsl(348, 73%, 57%);
-    --highlight-hover: hsl(348, 78%, 52%);
-    --link: hsl(215, 60%, 55%);
+    --background: hsl(222, 47%, 11%); /* Dark gray background */
+    --foreground: hsl(210, 16%, 98%); /* Light gray for text */
+    --primary: hsl(215, 75%, 64%); /* Brighter blue */
+    --primary-hover: hsl(215, 80%, 59%); /* Hover state for dark mode */
+    --secondary: hsl(42, 80%, 61%); /* Softer gold */
+    --accent: hsl(134, 50%, 51%); /* Softer green */
+    --accent-hover: hsl(134, 55%, 46%); /* Hover state for accent in dark mode */
+    --highlight: hsl(348, 73%, 57%); /* Softer red */
+    --highlight-hover: hsl(348, 78%, 52%); /* Hover state for highlight */
+    --text-muted: hsl(222, 20%, 70%); /* Muted gray */
+    --border-color: hsl(222, 27%, 18%); /* Darker gray for borders */
+    --subtle-link: hsl(215, 60%, 50%); /* Darker subtle blue for dark mode */
   }
 }
 
-/* Buttons */
+/* Base Styles */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Typography */
+.text-primary {
+  color: var(--primary);
+}
+
+.text-secondary {
+  color: var(--secondary);
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.text-highlight {
+  color: var(--highlight);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.font-heading {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+.font-body {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+/* Components */
+.card {
+  background-color: var(--background);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
+}
+
+/* Button Styles */
 .btn {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.375rem;
-  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  font-weight: 500;
   text-align: center;
-  cursor: pointer;
+  text-decoration: none;
   transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--foreground);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-accent {
+  background-color: var(--accent);
+  color: var(--foreground);
+}
+
+.btn-accent:hover {
+  background-color: var(--accent-hover);
+}
+
+.btn-highlight {
+  background-color: var(--highlight);
+  color: var(--foreground);
+}
+
+.btn-highlight:hover {
+  background-color: var(--highlight-hover);
 }
 
 /* GitHub Button */
@@ -74,45 +156,18 @@
   background-color: var(--linkedin-hover);
 }
 
-/* Resume Button */
-.btn-resume {
-  background-color: var(--resume-bg);
-  color: white;
-}
-
-.btn-resume:hover {
-  background-color: var(--resume-hover);
-}
-
-/* General Styling */
-body {
-  background-color: var(--background);
-  color: var(--foreground);
-  font-family: 'Inter', sans-serif;
-  line-height: 1.6;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
+/* Link Styles */
 a {
   text-decoration: none;
-  color: var(--link);
-  transition: color 0.3s ease;
+  color: var(--subtle-link);
 }
 
 a:hover {
   color: var(--highlight);
+  transition: color 0.3s ease;
 }
 
-.card {
-  background-color: var(--background);
-  border: 1px solid var(--border-color);
-  border-radius: 0.5rem;
-  padding: 1.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+a:focus {
+  outline: 2px solid var(--highlight);
+  outline-offset: 2px;
 }
