@@ -27,6 +27,14 @@ export default function Home() {
             >
               LinkedIn
             </a>
+            <a
+              href="https://drive.google.com/file/d/1RoUvaPEMfgqHYu-OJpOK2H2kQuYgwt2o/view?usp=drivesdk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-green-600 dark:bg-green-700 text-white dark:text-gray-300 rounded-lg shadow-md hover:bg-green-700 dark:hover:bg-green-600 transition"
+            >
+              Resume
+            </a>
           </div>
         </section>
 
