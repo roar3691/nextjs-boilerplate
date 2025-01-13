@@ -1,185 +1,126 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+"use client";
 
-/* Radix Colors: Professional Color Palette */
-:root {
-  --background: hsl(210, 16%, 98%); /* Neutral white */
-  --foreground: hsl(222, 47%, 11%); /* Dark gray for text */
-  --primary: hsl(215, 85%, 57%); /* Professional dark blue */
-  --primary-hover: hsl(215, 90%, 52%); /* Hover state for primary */
-  --secondary: hsl(42, 90%, 51%); /* Gold for accents */
-  --accent: hsl(134, 61%, 41%); /* Vibrant green for highlights */
-  --accent-hover: hsl(134, 65%, 36%); /* Hover state for accent */
-  --highlight: hsl(348, 83%, 47%); /* Bright red for alerts */
-  --highlight-hover: hsl(348, 87%, 42%); /* Hover state for highlight */
-  --text-muted: hsl(222, 15%, 60%); /* Muted gray for secondary text */
-  --border-color: hsl(210, 16%, 90%); /* Subtle gray for borders */
-  --subtle-link: hsl(215, 55%, 50%); /* Soft muted blue for links */
-  
-  /* GitHub Button */
-  --github-bg: #181717; /* GitHub Black */
-  --github-hover: #333333; /* Darker Gray */
-  
-  /* LinkedIn Button */
-  --linkedin-bg: #0077b5; /* LinkedIn Blue */
-  --linkedin-hover: #005582; /* Darker LinkedIn Blue */
-}
+export default function Home() {
+  return (
+    <main className="dark min-h-screen">
+      {/* Main Content */}
+      <div className="bg-white dark:bg-gray-900 text-black dark:text-white min-h-screen px-6 transition-colors">
+        {/* Hero Section */}
+        <section className="text-center py-12">
+          <p className="text-lg max-w-2xl mx-auto mb-8">
+            A passionate AI/ML enthusiast with expertise in software development and research. Building solutions to solve real-world problems with innovation and technology.
+          </p>
+          <div className="flex space-x-4 justify-center">
+            <a
+              href="https://github.com/roar3691"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-black dark:bg-gray-800 text-white dark:text-gray-300 rounded-lg shadow-md hover:bg-gray-800 dark:hover:bg-gray-600 transition"
+            >
+              GitHub
+            </a>
+            <a
+              href="https://www.linkedin.com/in/yanala-raghuvamshi-reddy-a9a831202/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-blue-600 dark:bg-blue-700 text-white dark:text-gray-300 rounded-lg shadow-md hover:bg-blue-700 dark:hover:bg-blue-600 transition"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="https://drive.google.com/file/d/1RoUvaPEMfgqHYu-OJpOK2H2kQuYgwt2o/view?usp=drivesdk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-yellow-500 dark:bg-yellow-600 text-white dark:text-gray-300 rounded-lg shadow-md hover:bg-yellow-600 dark:hover:bg-yellow-700 transition"
+            >
+              Resume
+            </a>
+          </div>
+        </section>
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: hsl(222, 47%, 11%); /* Dark gray background */
-    --foreground: hsl(210, 16%, 98%); /* Light gray for text */
-    --primary: hsl(215, 75%, 64%); /* Brighter blue */
-    --primary-hover: hsl(215, 80%, 59%); /* Hover state for dark mode */
-    --secondary: hsl(42, 80%, 61%); /* Softer gold */
-    --accent: hsl(134, 50%, 51%); /* Softer green */
-    --accent-hover: hsl(134, 55%, 46%); /* Hover state for accent in dark mode */
-    --highlight: hsl(348, 73%, 57%); /* Softer red */
-    --highlight-hover: hsl(348, 78%, 52%); /* Hover state for highlight */
-    --text-muted: hsl(222, 20%, 70%); /* Muted gray */
-    --border-color: hsl(222, 27%, 18%); /* Darker gray for borders */
-    --subtle-link: hsl(215, 60%, 50%); /* Darker subtle blue for dark mode */
-  }
-}
+        {/* Core Skills Section */}
+        <section id="skills" className="py-12">
+          <h2 className="text-3xl font-bold mb-6 text-center">Core Skills</h2>
+          <ul className="list-disc list-inside max-w-2xl mx-auto space-y-2">
+            <li>C, C++, Python</li>
+            <li>AI/ML, TensorFlow, Flask</li>
+            <li>Web Scraping, Data Processing</li>
+            <li>API Development, OOP</li>
+          </ul>
+        </section>
 
-/* Base Styles */
-body {
-  background-color: var(--background);
-  color: var(--foreground);
-  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
+        {/* Projects Section */}
+        <section id="projects" className="py-12">
+          <h2 className="text-3xl font-bold mb-6 text-center">Projects</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-semibold mb-2">
+                <a
+                  href="https://github.com/roar3691/Art_image_classifier"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
+                  AI-based Defect Detection
+                </a>
+              </h3>
+              <p>Developed a deep learning system using MobileNetV3, achieving high accuracy.</p>
+            </div>
+            <div className="bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-semibold mb-2">
+                <a
+                  href="https://github.com/roar3691/chatbot"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
+                  Chatbot Project
+                </a>
+              </h3>
+              <p>Built a chatbot using Langchain and Flask for course search functionalities.</p>
+            </div>
+            <div className="bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-semibold mb-2">
+                <a
+                  href="https://github.com/roar3691/weather-monitoring-system"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
+                  Weather Monitoring System
+                </a>
+              </h3>
+              <p>Real-time weather data fetch from OpenWeatherMap API.</p>
+            </div>
+          </div>
+        </section>
 
-/* Typography */
-.text-primary {
-  color: var(--primary);
-}
-
-.text-secondary {
-  color: var(--secondary);
-}
-
-.text-accent {
-  color: var(--accent);
-}
-
-.text-highlight {
-  color: var(--highlight);
-}
-
-.text-muted {
-  color: var(--text-muted);
-}
-
-.font-heading {
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
-  font-weight: 600;
-}
-
-.font-body {
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
-}
-
-/* Components */
-.card {
-  background-color: var(--background);
-  border: 1px solid var(--border-color);
-  border-radius: 0.5rem;
-  padding: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.card:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  transform: translateY(-4px);
-}
-
-/* Button Styles */
-.btn {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  border: 1px solid transparent;
-  border-radius: 0.5rem; /* Rounded corners for a more aesthetic look */
-  font-weight: 500;
-  text-align: center;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.btn-primary {
-  background-color: var(--primary);
-  color: var(--foreground);
-}
-
-.btn-primary:hover {
-  background-color: var(--primary-hover);
-}
-
-.btn-accent {
-  background-color: var(--accent);
-  color: var(--foreground);
-}
-
-.btn-accent:hover {
-  background-color: var(--accent-hover);
-}
-
-.btn-highlight {
-  background-color: var(--highlight);
-  color: var(--foreground);
-}
-
-.btn-highlight:hover {
-  background-color: var(--highlight-hover);
-}
-
-/* GitHub Button */
-.btn-github {
-  background-color: var(--github-bg);
-  color: white;
-  border-radius: 0.5rem; /* Rounded corners */
-  padding: 0.75rem 1.25rem; /* Slightly larger for GitHub button */
-  font-size: 1rem;
-  font-weight: 600;
-  text-align: center;
-  text-decoration: none;
-}
-
-.btn-github:hover {
-  background-color: var(--github-hover);
-}
-
-/* LinkedIn Button */
-.btn-linkedin {
-  background-color: var(--linkedin-bg);
-  color: white;
-  border-radius: 0.5rem; /* Rounded corners */
-  padding: 0.75rem 1.25rem; /* Slightly larger for LinkedIn button */
-  font-size: 1rem;
-  font-weight: 600;
-  text-align: center;
-  text-decoration: none;
-}
-
-.btn-linkedin:hover {
-  background-color: var(--linkedin-hover);
-}
-
-/* Link Styles */
-a {
-  text-decoration: none;
-  color: var(--subtle-link);
-}
-
-a:hover {
-  color: var(--highlight);
-  transition: color 0.3s ease;
-}
-
-a:focus {
-  outline: 2px solid var(--highlight);
-  outline-offset: 2px;
+        {/* Contact Section */}
+        <section id="contact" className="py-12">
+          <h2 className="text-3xl font-bold mb-6 text-center">Contact</h2>
+          <ul className="list-none space-y-4 max-w-xl mx-auto text-center">
+            <li>
+              Email:{" "}
+              <a href="mailto:raghu.yanala@gmail.com" className="hover:underline">
+                raghu.yanala@gmail.com
+              </a>
+            </li>
+            <li>Phone: 6309127542</li>
+            <li>
+              LinkedIn:{" "}
+              <a
+                href="https://www.linkedin.com/in/yanala-raghuvamshi-reddy-a9a831202/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                LinkedIn Profile
+              </a>
+            </li>
+            <li>Location: Hyderabad, Telangana</li>
+          </ul>
+        </section>
+      </div>
+    </main>
+  );
 }
