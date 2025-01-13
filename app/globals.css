@@ -6,14 +6,14 @@
 :root {
   --background: hsl(210, 16%, 98%); /* Neutral white */
   --foreground: hsl(222, 47%, 11%); /* Dark gray for text */
-  --primary: #333333; /* GitHub - Dark gray */
-  --primary-hover: #24292f; /* GitHub - Darker gray */
-  --secondary: #0077b5; /* LinkedIn - Blue */
-  --secondary-hover: #006193; /* LinkedIn - Darker blue */
-  --accent: #fbbc05; /* Resume - Google yellow */
-  --accent-hover: #f6a800; /* Resume - Darker yellow */
+  --primary: #222222; /* Darker GitHub gray */
+  --primary-hover: #171717; /* Darker GitHub gray on hover */
+  --secondary: #0073b1; /* LinkedIn blue */
+  --secondary-hover: #006097; /* Darker LinkedIn blue on hover */
+  --accent: #fbbc05; /* Google yellow for resume */
+  --accent-hover: #f6a800; /* Darker yellow for resume on hover */
   --highlight: #ff3b30; /* Red for alerts */
-  --highlight-hover: #d72c2a; /* Hover state for highlight */
+  --highlight-hover: #d72c2a; /* Darker red for hover */
   --text-muted: hsl(222, 15%, 60%); /* Muted gray for secondary text */
   --border-color: hsl(210, 16%, 90%); /* Subtle gray for borders */
   --subtle-link: hsl(215, 55%, 50%); /* Soft muted blue for links */
@@ -23,12 +23,12 @@
   :root {
     --background: hsl(222, 47%, 11%); /* Dark gray background */
     --foreground: hsl(210, 16%, 98%); /* Light gray for text */
-    --primary: #f6f8fa; /* GitHub - Light gray */
-    --primary-hover: #ffffff; /* GitHub - White */
-    --secondary: #005582; /* LinkedIn - Darker blue for dark mode */
-    --secondary-hover: #00406f; /* LinkedIn - Even darker blue for dark mode */
-    --accent: #f6a800; /* Resume - Darker yellow */
-    --accent-hover: #fbbc05; /* Resume - Light yellow for dark mode */
+    --primary: #f6f8fa; /* Lighter GitHub gray */
+    --primary-hover: #ffffff; /* White on hover */
+    --secondary: #006097; /* Darker LinkedIn blue for dark mode */
+    --secondary-hover: #004f75; /* Darker LinkedIn blue on hover */
+    --accent: #f6a800; /* Darker yellow for resume */
+    --accent-hover: #fbbc05; /* Lighter yellow for dark mode hover */
     --highlight: #ff3b30; /* Soft Red for dark mode */
     --highlight-hover: #d72c2a; /* Darker red for hover */
     --text-muted: hsl(222, 20%, 70%); /* Muted gray */
