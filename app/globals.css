@@ -9,10 +9,10 @@
   --foreground: hsl(222, 47%, 11%);
   --primary: hsl(215, 85%, 57%);
   --primary-hover: hsl(215, 90%, 52%);
-  --github-bg: #000000; /* Black */
-  --github-hover: #24292f; /* Dark Gray */
-  --linkedin-bg: #0a66c2; /* Bright Blue */
-  --linkedin-hover: #004182; /* Darker Blue */
+  --github-bg: #000000; /* GitHub Black */
+  --github-hover: #333333; /* Darker Gray */
+  --linkedin-bg: #0077B5; /* Official LinkedIn Blue */
+  --linkedin-hover: #005582; /* Darker LinkedIn Blue */
   --resume-bg: #f7ca4d; /* Bright Yellow */
   --resume-hover: #cfa12f; /* Deeper Yellow */
   --text-muted: hsl(222, 15%, 60%);
@@ -29,11 +29,11 @@
     --foreground: hsl(210, 16%, 98%);
     --primary: hsl(215, 75%, 64%);
     --primary-hover: hsl(215, 80%, 59%);
-    --github-bg: #f0f6fc; /* Lighter Gray */
-    --github-hover: #d0d7de; /* Light Gray */
-    --linkedin-bg: #0a66c2; /* Bright Blue (consistent for dark mode) */
-    --linkedin-hover: #004182; /* Darker Blue */
-    --resume-bg: #f7ca4d; /* Bright Yellow (consistent for dark mode) */
+    --github-bg: #f0f6fc; /* GitHub Lighter Gray */
+    --github-hover: #d0d7de; /* Lighter Hover Gray */
+    --linkedin-bg: #0077B5; /* Official LinkedIn Blue */
+    --linkedin-hover: #005582; /* Darker LinkedIn Blue */
+    --resume-bg: #f7ca4d; /* Bright Yellow */
     --resume-hover: #cfa12f; /* Deeper Yellow */
     --text-muted: hsl(222, 20%, 70%);
     --border-color: hsl(222, 27%, 18%);
@@ -41,54 +41,6 @@
     --highlight-hover: hsl(348, 78%, 52%);
     --link: hsl(215, 60%, 55%);
   }
-}
-
-/* Global Body Styles */
-body {
-  background-color: var(--background);
-  color: var(--foreground);
-  font-family: 'Inter', sans-serif;
-  line-height: 1.6;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Typography */
-h1,
-h2,
-h3 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-
-p {
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  line-height: 1.75;
-}
-
-.text-primary {
-  color: var(--primary);
-}
-
-.text-muted {
-  color: var(--text-muted);
-}
-
-/* Links */
-a {
-  color: var(--link);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: var(--highlight);
-}
-
-a:focus {
-  outline: 2px solid var(--highlight);
-  outline-offset: 2px;
 }
 
 /* Buttons */
@@ -132,7 +84,25 @@ a:focus {
   background-color: var(--resume-hover);
 }
 
-/* Card Styling */
+/* General Styling */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+  color: var(--link);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--highlight);
+}
+
 .card {
   background-color: var(--background);
   border: 1px solid var(--border-color);
@@ -145,29 +115,4 @@ a:focus {
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* Navigation Links */
-.nav-link {
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  font-weight: 500;
-}
-
-.nav-link:hover {
-  background-color: var(--primary);
-  color: var(--foreground);
-}
-
-/* Utility Classes */
-.text-center {
-  text-align: center;
-}
-
-.max-w-2xl {
-  max-width: 42rem;
-}
-
-.space-y-4 > * + * {
-  margin-top: 1rem;
 }
