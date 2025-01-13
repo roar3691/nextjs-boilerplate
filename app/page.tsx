@@ -31,7 +31,7 @@ export default function Home() {
               href="https://drive.google.com/file/d/1RoUvaPEMfgqHYu-OJpOK2H2kQuYgwt2o/view?usp=drivesdk"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 bg-green-600 dark:bg-green-700 text-white dark:text-gray-300 rounded-lg shadow-md hover:bg-green-700 dark:hover:bg-green-600 transition"
+              className="px-6 py-3 bg-yellow-500 dark:bg-yellow-600 text-white dark:text-gray-300 rounded-lg shadow-md hover:bg-yellow-600 dark:hover:bg-yellow-700 transition"
             >
               Resume
             </a>
