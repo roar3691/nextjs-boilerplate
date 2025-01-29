@@ -104,6 +104,8 @@ export default function Home() {
               <a href="mailto:raghu.yanala@gmail.com" className="hover:underline">
                 raghu.yanala@gmail.com
               </a>
+            </li>
+            <li>
               LinkedIn:{" "}
               <a
                 href="https://www.linkedin.com/in/yanala-raghuvamshi-reddy-a9a831202/"
