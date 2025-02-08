@@ -106,15 +106,12 @@ export default function Home() {
               </a>
             </li>
             <li>
-              LinkedIn:{" "}
               <a
                 href="https://www.linkedin.com/in/yanala-raghuvamshi-reddy-a9a831202/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline"
-              >
-                LinkedIn Profile
-              </a>
+              ></a>
             </li>
             <li>Location: Hyderabad, Telangana</li>
           </ul>
