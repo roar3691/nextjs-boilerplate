@@ -69,7 +69,7 @@ export default function Home() {
             <div className="bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md p-6">  
               <h3 className="text-xl font-semibold mb-2">  
                 <a  
-                  href="https://github.com/roar3691/chatbot"  
+                  href="https://chatbotwith-contextual-attention-pzdquddcpbhndaphdm3cfu.streamlit.app/"  
                   target="_blank"  
                   rel="noopener noreferrer"  
                   className="hover:underline"  
@@ -77,7 +77,7 @@ export default function Home() {
                   Chatbot Project  
                 </a>  
               </h3>  
-              <p>Built a chatbot using Langchain and Flask for course search functionalities.</p>  
+              <p>Built a chatbot using Streamlit and Gemini AI for enhanced conversational functionalities.</p>  
             </div>  
             <div className="bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md p-6">  
               <h3 className="text-xl font-semibold mb-2">  
