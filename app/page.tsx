@@ -82,15 +82,15 @@ export default function Home() {
             <div className="bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md p-6">  
               <h3 className="text-xl font-semibold mb-2">  
                 <a  
-                  href="https://github.com/roar3691/weather-monitoring-system"  
+                  href="https://huggingface.co/spaces/roar3691/NewsSummarizerTTS"  
                   target="_blank"  
                   rel="noopener noreferrer"  
                   className="hover:underline"  
                 >  
-                  Weather Monitoring System  
+                  NewsEcho  
                 </a>  
               </h3>  
-              <p>Real-time weather data fetch from OpenWeatherMap API.</p>  
+              <p>Summarizes news and converts sentiment analysis to Hindi TTS using Streamlit and FastAPI.</p>  
             </div>  
           </div>  
         </section>  
