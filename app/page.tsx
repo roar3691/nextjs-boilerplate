@@ -55,8 +55,8 @@ export default function Home() {
           
           {/* About Subsection */}
           <div className="mb-8">
-            <p className="max-w-2xl mx-auto text-center text-lg leading-relaxed">
-              My projects stand as testaments to my drive for pushing boundaries in AI/ML and software engineering, each crafted to address pressing real-world needs with cutting-edge solutions.{" "}
+            <p className="max-w-2xl mx-auto text-center text-lg">
+              My projects push AI/ML and software boundaries: {" "}
               <a
                 href="https://github.com/roar3691/Art_image_classifier"
                 target="_blank"
@@ -65,7 +65,7 @@ export default function Home() {
               >
                 AI-based Defect Detection
               </a>{" "}
-              revolutionizes quality assurance, harnessing MobileNetV3’s deep learning prowess to deliver unparalleled accuracy in identifying imperfections. The{" "}
+              excels with MobileNetV3, {" "}
               <a
                 href="https://chatbotwith-contextual-attention-pzdquddcpbhndaphdm3cfu.streamlit.app/"
                 target="_blank"
@@ -74,7 +74,7 @@ export default function Home() {
               >
                 Chatbot Project
               </a>{" "}
-              redefines conversational AI, integrating Streamlit and Gemini AI to create a dynamic, context-aware dialogue system that rivals human interaction.{" "}
+              shines with Gemini AI, {" "}
               <a
                 href="https://huggingface.co/spaces/roar3691/NewsSummarizerTTS"
                 target="_blank"
@@ -83,7 +83,7 @@ export default function Home() {
               >
                 NewsEcho
               </a>{" "}
-              transforms how we consume information, blending advanced news summarization with Hindi text-to-speech, powered by Streamlit and FastAPI for seamless multilingual accessibility. Capping this lineup,{" "}
+              innovates with Hindi TTS, and {" "}
               <a
                 href="https://huggingface.co/spaces/roar3691/coding_assistant"
                 target="_blank"
@@ -92,7 +92,7 @@ export default function Home() {
               >
                 CodeWizard
               </a>{" "}
-              empowers developers worldwide, fusing DeepSeek LLM’s intelligence, Google Search’s vast knowledge, and MongoDB’s robust storage into a state-of-the-art coding companion hosted on Hugging Face Spaces. These endeavors collectively embody my vision: to innovate relentlessly and solve problems that matter.
+              empowers with DeepSeek LLM and MongoDB—bold solutions to real challenges.
             </p>
           </div>
 
