@@ -55,44 +55,44 @@ export default function Home() {
           
           {/* About Subsection */}
           <div className="mb-8">
-            <p className="max-w-2xl mx-auto text-center">
-              My projects reflect a fusion of AI/ML innovation and practical software engineering, tackling diverse real-world challenges.{" "}
+            <p className="max-w-2xl mx-auto text-center text-lg leading-relaxed">
+              My projects stand as testaments to my drive for pushing boundaries in AI/ML and software engineering, each crafted to address pressing real-world needs with cutting-edge solutions.{" "}
               <a
                 href="https://github.com/roar3691/Art_image_classifier"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-500 dark:text-blue-400 hover:underline"
+                className="text-blue-500 dark:text-blue-400 hover:underline font-semibold"
               >
                 AI-based Defect Detection
               </a>{" "}
-              leverages MobileNetV3 to enhance quality control with high-accuracy deep learning. My{" "}
+              revolutionizes quality assurance, harnessing MobileNetV3’s deep learning prowess to deliver unparalleled accuracy in identifying imperfections. The{" "}
               <a
                 href="https://chatbotwith-contextual-attention-pzdquddcpbhndaphdm3cfu.streamlit.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-500 dark:text-blue-400 hover:underline"
+                className="text-blue-500 dark:text-blue-400 hover:underline font-semibold"
               >
                 Chatbot Project
               </a>{" "}
-              employs Streamlit and Gemini AI to deliver advanced conversational capabilities.{" "}
+              redefines conversational AI, integrating Streamlit and Gemini AI to create a dynamic, context-aware dialogue system that rivals human interaction.{" "}
               <a
                 href="https://huggingface.co/spaces/roar3691/NewsSummarizerTTS"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-500 dark:text-blue-400 hover:underline"
+                className="text-blue-500 dark:text-blue-400 hover:underline font-semibold"
               >
                 NewsEcho
               </a>{" "}
-              combines news summarization with Hindi TTS, showcasing multilingual data processing. Finally,{" "}
+              transforms how we consume information, blending advanced news summarization with Hindi text-to-speech, powered by Streamlit and FastAPI for seamless multilingual accessibility. Capping this lineup,{" "}
               <a
                 href="https://huggingface.co/spaces/roar3691/coding_assistant"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-500 dark:text-blue-400 hover:underline"
+                className="text-blue-500 dark:text-blue-400 hover:underline font-semibold"
               >
                 CodeWizard
               </a>{" "}
-              integrates DeepSeek LLM, Google Search, and MongoDB to provide a robust coding assistant. Together, these projects demonstrate my commitment to impactful, technology-driven solutions.
+              empowers developers worldwide, fusing DeepSeek LLM’s intelligence, Google Search’s vast knowledge, and MongoDB’s robust storage into a state-of-the-art coding companion hosted on Hugging Face Spaces. These endeavors collectively embody my vision: to innovate relentlessly and solve problems that matter.
             </p>
           </div>
 
