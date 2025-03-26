@@ -56,7 +56,34 @@ export default function Home() {
           {/* About Subsection */}
           <div className="mb-8">
             <p className="max-w-2xl mx-auto text-center">
-              My projects showcase a blend of AI/ML innovation and practical software solutions. From defect detection to conversational AI and news summarization, I aim to address real-world challenges. A highlight is{" "}
+              My projects reflect a fusion of AI/ML innovation and practical software engineering, tackling diverse real-world challenges.{" "}
+              <a
+                href="https://github.com/roar3691/Art_image_classifier"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 dark:text-blue-400 hover:underline"
+              >
+                AI-based Defect Detection
+              </a>{" "}
+              leverages MobileNetV3 to enhance quality control with high-accuracy deep learning. My{" "}
+              <a
+                href="https://chatbotwith-contextual-attention-pzdquddcpbhndaphdm3cfu.streamlit.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 dark:text-blue-400 hover:underline"
+              >
+                Chatbot Project
+              </a>{" "}
+              employs Streamlit and Gemini AI to deliver advanced conversational capabilities.{" "}
+              <a
+                href="https://huggingface.co/spaces/roar3691/NewsSummarizerTTS"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 dark:text-blue-400 hover:underline"
+              >
+                NewsEcho
+              </a>{" "}
+              combines news summarization with Hindi TTS, showcasing multilingual data processing. Finally,{" "}
               <a
                 href="https://huggingface.co/spaces/roar3691/coding_assistant"
                 target="_blank"
@@ -64,8 +91,8 @@ export default function Home() {
                 className="text-blue-500 dark:text-blue-400 hover:underline"
               >
                 CodeWizard
-              </a>
-              , a coding assistant hosted on Hugging Face Spaces, leveraging DeepSeek LLM, Google Search, and MongoDB for persistent chat storage.
+              </a>{" "}
+              integrates DeepSeek LLM, Google Search, and MongoDB to provide a robust coding assistant. Together, these projects demonstrate my commitment to impactful, technology-driven solutions.
             </p>
           </div>
 
