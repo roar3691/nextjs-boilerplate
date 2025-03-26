@@ -49,13 +49,12 @@ export default function Home() {
           </ul>
         </section>
 
-        {/* Projects Section */}
+        {/* About My Projects */}
         <section id="projects" className="py-12">
           <h2 className="text-3xl font-bold mb-6 text-center">Projects</h2>
           
           {/* About Subsection */}
           <div className="mb-8">
-            <h3 className="text-2xl font-semibold mb-4 text-center">About My Projects</h3>
             <p className="max-w-2xl mx-auto text-center">
               My projects showcase a blend of AI/ML innovation and practical software solutions. From defect detection to conversational AI and news summarization, I aim to address real-world challenges. A highlight is{" "}
               <a
