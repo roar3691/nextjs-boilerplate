@@ -56,7 +56,7 @@ export default function Home() {
           {/* About Subsection */}
           <div className="mb-8">
             <p className="max-w-2xl mx-auto text-center text-lg">
-              My projects push AI/ML and software boundaries: {" "}
+              My projects push the frontiers of AI/ML and software innovation: {" "}
               <a
                 href="https://github.com/roar3691/Art_image_classifier"
                 target="_blank"
@@ -65,7 +65,7 @@ export default function Home() {
               >
                 AI-based Defect Detection
               </a>{" "}
-              excels with MobileNetV3, {" "}
+              excels in quality control, using MobileNetV3 for precise defect identification; {" "}
               <a
                 href="https://chatbotwith-contextual-attention-pzdquddcpbhndaphdm3cfu.streamlit.app/"
                 target="_blank"
@@ -74,7 +74,7 @@ export default function Home() {
               >
                 Chatbot Project
               </a>{" "}
-              shines with Gemini AI, {" "}
+              shines with Streamlit and Gemini AI, enabling smart, context-rich conversations; {" "}
               <a
                 href="https://huggingface.co/spaces/roar3691/NewsSummarizerTTS"
                 target="_blank"
@@ -83,7 +83,7 @@ export default function Home() {
               >
                 NewsEcho
               </a>{" "}
-              innovates with Hindi TTS, and {" "}
+              innovates news delivery with Streamlit, FastAPI, and Hindi TTS for multilingual access; and {" "}
               <a
                 href="https://huggingface.co/spaces/roar3691/coding_assistant"
                 target="_blank"
@@ -92,7 +92,7 @@ export default function Home() {
               >
                 CodeWizard
               </a>{" "}
-              empowers with DeepSeek LLM and MongoDB—bold solutions to real challenges.
+              empowers coders via DeepSeek LLM, Google Search, and MongoDB on Hugging Face Spaces—bold, impactful solutions to real-world challenges.
             </p>
           </div>
 
