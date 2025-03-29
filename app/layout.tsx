@@ -1,155 +1,182 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+"use client";
 
-/* Radix Colors: Professional Color Palette */
-:root {
-  --background: hsl(210, 16%, 98%); /* Neutral white */
-  --foreground: hsl(222, 47%, 11%); /* Dark gray for text */
-  --primary: #222222; /* Darker GitHub gray */
-  --primary-hover: #171717; /* Darker GitHub gray on hover */
-  --secondary: #0073b1; /* LinkedIn blue */
-  --secondary-hover: #006097; /* Darker LinkedIn blue on hover */
-  --accent: #fbbc05; /* Google yellow for resume */
-  --accent-hover: #f6a800; /* Darker yellow for resume on hover */
-  --highlight: #ff3b30; /* Red for alerts */
-  --highlight-hover: #d72c2a; /* Darker red for hover */
-  --text-muted: hsl(222, 15%, 60%); /* Muted gray for secondary text */
-  --border-color: hsl(210, 16%, 90%); /* Subtle gray for borders */
-  --subtle-link: hsl(215, 55%, 50%); /* Soft muted blue for links */
-}
+export default function Home() {
+  return (
+    <main className="dark min-h-screen">
+      {/* Main Content */}
+      <div className="bg-white dark:bg-gray-900 text-black dark:text-white min-h-screen px-6 transition-colors">
+        {/* Hero Section */}
+        <section className="text-center py-12">
+          <p className="text-lg max-w-2xl mx-auto mb-8">
+            A passionate AI/ML enthusiast with expertise in software development and research. Building solutions to solve real-world problems with innovation and technology.
+          </p>
+          <div className="flex space-x-4 justify-center">
+            <a
+              href="https://github.com/roar3691"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-black dark:bg-gray-800 text-white rounded-lg shadow-md hover:bg-gray-800 dark:hover:bg-gray-600 transition"
+            >
+              GitHub
+            </a>
+            <a
+              href="https://www.linkedin.com/in/yanala-raghuvamshi-reddy-a9a831202/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-blue-600 dark:bg-blue-700 text-white rounded-lg shadow-md hover:bg-blue-700 dark:hover:bg-blue-600 transition"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="https://drive.google.com/file/d/1wKt8vT5hZ7T5FYRMufx_r3KVFSW3m-UA/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-yellow-500 dark:bg-yellow-600 text-white rounded-lg shadow-md hover:bg-yellow-600 dark:hover:bg-yellow-700 transition"
+            >
+              Resume
+            </a>
+          </div>
+        </section>
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: hsl(222, 47%, 11%); /* Dark gray background */
-    --foreground: hsl(210, 16%, 98%); /* Light gray for text */
-    --primary: #f6f8fa; /* Lighter GitHub gray */
-    --primary-hover: #ffffff; /* White on hover */
-    --secondary: #006097; /* Darker LinkedIn blue for dark mode */
-    --secondary-hover: #004f75; /* Darker LinkedIn blue on hover */
-    --accent: #f6a800; /* Darker yellow for resume */
-    --accent-hover: #fbbc05; /* Lighter yellow for dark mode hover */
-    --highlight: #ff3b30; /* Soft Red for dark mode */
-    --highlight-hover: #d72c2a; /* Darker red for hover */
-    --text-muted: hsl(222, 20%, 70%); /* Muted gray */
-    --border-color: hsl(222, 27%, 18%); /* Darker gray for borders */
-    --subtle-link: hsl(215, 60%, 50%); /* Darker subtle blue for dark mode */
-  }
-}
+        {/* Core Skills Section */}
+        <section id="skills" className="py-12">
+          <h2 className="text-3xl font-bold mb-6 text-center">Core Skills</h2>
+          <ul className="list-disc list-inside max-w-2xl mx-auto space-y-2">
+            <li>C, C++, Python</li>
+            <li>AI/ML, TensorFlow, Flask</li>
+            <li>Web Scraping, Data Processing</li>
+            <li>API Development, OOP</li>
+          </ul>
+        </section>
 
-/* Base Styles */
-body {
-  background-color: var(--background);
-  color: var(--foreground);
-  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
+        {/* About My Projects */}
+        <section id="projects" className="py-12">
+          <h2 className="text-3xl font-bold mb-6 text-center">Projects</h2>
+          
+          {/* About Subsection */}
+          <div className="mb-8">
+            <p className="max-w-2xl mx-auto text-center text-lg">
+              My projects push the frontiers of AI/ML and software innovation: {" "}
+              <a
+                href="https://github.com/roar3691/Art_image_classifier"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 dark:text-blue-400 hover:underline font-semibold"
+              >
+                AI-based Defect Detection
+              </a>{" "}
+              excels in quality control, using MobileNetV3 for precise defect identification; {" "}
+              <a
+                href="https://chatbotwith-contextual-attention-pzdquddcpbhndaphdm3cfu.streamlit.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 dark:text-blue-400 hover:underline font-semibold"
+              >
+                Chatbot Project
+              </a>{" "}
+              shines with Streamlit and Gemini AI, enabling smart, context-rich conversations; {" "}
+              <a
+                href="https://huggingface.co/spaces/roar3691/NewsSummarizerTTS"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 dark:text-blue-400 hover:underline font-semibold"
+              >
+                NewsEcho
+              </a>{" "}
+              innovates news delivery with Streamlit, FastAPI, and Hindi TTS for multilingual access; and {" "}
+              <a
+                href="https://huggingface.co/spaces/roar3691/coding_assistant"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 dark:text-blue-400 hover:underline font-semibold"
+              >
+                CodeWizard
+              </a>{" "}
+              empowers coders via DeepSeek LLM, Google Search, and MongoDB on Hugging Face Spaces—bold, impactful solutions to real-world challenges.
+            </p>
+          </div>
 
-/* Typography */
-.text-primary {
-  color: var(--primary);
-}
+          {/* Project Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md p-6">
+              <h3 className="text-xl font-semibold mb-2">
+                <a
+                  href="https://github.com/roar3691/Art_image_classifier"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
+                  AI-based Defect Detection
+                </a>
+              </h3>
+              <p>Developed a deep learning system using MobileNetV3, achieving high accuracy.</p>
+            </div>
+            <div className="bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md p-6">
+              <h3 className="text-xl font-semibold mb-2">
+                <a
+                  href="https://chatbotwith-contextual-attention-pzdquddcpbhndaphdm3cfu.streamlit.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
+                  Chatbot Project
+                </a>
+              </h3>
+              <p>Built a chatbot using Streamlit and Gemini AI for enhanced conversational functionalities.</p>
+            </div>
+            <div className="bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md p-6">
+              <h3 className="text-xl font-semibold mb-2">
+                <a
+                  href="https://huggingface.co/spaces/roar3691/NewsSummarizerTTS"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
+                  NewsEcho
+                </a>
+              </h3>
+              <p>Summarizes news and converts sentiment analysis to Hindi TTS using Streamlit and FastAPI.</p>
+            </div>
+            <div className="bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md p-6">
+              <h3 className="text-xl font-semibold mb-2">
+                <a
+                  href="https://huggingface.co/spaces/roar3691/coding_assistant"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
+                  CodeWizard
+                </a>
+              </h3>
+              <p>A coding assistant powered by DeepSeek LLM, Google Search, and MongoDB for persistent storage.</p>
+            </div>
+          </div>
+        </section>
 
-.text-secondary {
-  color: var(--secondary);
-}
-
-.text-accent {
-  color: var(--accent);
-}
-
-.text-highlight {
-  color: var(--highlight);
-}
-
-.text-muted {
-  color: var(--text-muted);
-}
-
-.font-heading {
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
-  font-weight: 600;
-}
-
-.font-body {
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
-}
-
-/* Components */
-.card {
-  background-color: var(--background);
-  border: 1px solid var(--border-color);
-  border-radius: 0.5rem;
-  padding: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.card:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  transform: translateY(-4px);
-}
-
-.btn {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  font-weight: 500;
-  text-align: center;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.btn-primary {
-  background-color: var(--primary);
-  color: var(--foreground);
-}
-
-.btn-primary:hover {
-  background-color: var(--primary-hover);
-}
-
-.btn-secondary {
-  background-color: var(--secondary);
-  color: var(--foreground);
-}
-
-.btn-secondary:hover {
-  background-color: var(--secondary-hover);
-}
-
-.btn-accent {
-  background-color: var(--accent);
-  color: var(--foreground);
-}
-
-.btn-accent:hover {
-  background-color: var(--accent-hover);
-}
-
-.btn-highlight {
-  background-color: var(--highlight);
-  color: var(--foreground);
-}
-
-.btn-highlight:hover {
-  background-color: var(--highlight-hover);
-}
-
-/* Link styles */
-a {
-  text-decoration: none;
-  color: var(--subtle-link);
-}
-
-a:hover {
-  color: var(--highlight);
-  transition: color 0.3s ease;
-}
-
-a:focus {
-  outline: 2px solid var(--highlight);
-  outline-offset: 2px;
+        {/* Contact Section */}
+        <section id="contact" className="py-12">
+          <h2 className="text-3xl font-bold mb-6 text-center">Contact</h2>
+          <ul className="list-none space-y-4 max-w-xl mx-auto text-center">
+            <li>
+              Email:{" "}
+              <a href="mailto:raghu.yanala@gmail.com" className="hover:underline">
+                raghu.yanala@gmail.com
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/yanala-raghuvamshi-reddy-a9a831202/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                LinkedIn Profile
+              </a>
+            </li>
+            <li>Location: Hyderabad, Telangana</li>
+          </ul>
+        </section>
+      </div>
+    </main>
+  );
 }
