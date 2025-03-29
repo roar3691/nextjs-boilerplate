@@ -1,60 +1,37 @@
-"use client";
-import { motion } from "framer-motion";
+import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
 
-export default function Home() {
+const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
+const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
+
+export const metadata: Metadata = {
+  title: "Yanala Raghuvamshi Reddy | AI/ML Portfolio",
+  description: "Showcasing projects, skills, and research in AI/ML",
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div>
-      {/* Hero Section */}
-      <section className="text-center py-20">
-        <motion.h1 
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-5xl font-bold"
-        >
-          AI/ML Engineer & Researcher
-        </motion.h1>
-        <p className="text-lg mt-4">Building intelligent systems to solve real-world problems.</p>
-      </section>
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className="bg-background text-foreground font-body">
+        <div className="container mx-auto px-6 lg:px-12">
+          <header className="text-center py-6 border-b border-border-color">
+            <h1 className="text-5xl font-heading text-primary mb-2">Yanala Raghuvamshi Reddy</h1>
+            <p className="text-lg text-muted">AI/ML Enthusiast | Researcher | IEEE Treasurer</p>
+            <nav className="mt-6 space-x-6">
+              <a href="#skills" className="hover:text-highlight">Skills</a>
+              <a href="#projects" className="hover:text-highlight">Projects</a>
+              <a href="#contact" className="hover:text-highlight">Contact</a>
+            </nav>
+          </header>
 
-      {/* About Section */}
-      <section id="about" className="section">
-        <h2>About Me</h2>
-        <p className="mt-4">Pursuing BTech in Computer Science (AI/ML) at CMREC. Passionate about AI research and innovation.</p>
-      </section>
+          {children}
 
-      {/* Skills Section */}
-      <section id="skills" className="section">
-        <h2>Skills</h2>
-        <ul className="mt-4 grid grid-cols-2 gap-4">
-          <li>Python</li>
-          <li>TensorFlow</li>
-          <li>Web Scraping</li>
-          <li>Deep Learning</li>
-        </ul>
-      </section>
-
-      {/* Projects Section */}
-      <section id="projects" className="section">
-        <h2>Projects</h2>
-        <ul className="mt-4">
-          <li>AI-based Defect Detection</li>
-          <li>Chatbot with Contextual Attention</li>
-          <li>News Summarizer with TTS</li>
-        </ul>
-      </section>
-
-      {/* Research Section */}
-      <section id="research" className="section">
-        <h2>Research</h2>
-        <p className="mt-4">Working on AI personalization, knowledge graphs, and NLP innovations.</p>
-      </section>
-
-      {/* Contact Section */}
-      <section id="contact" className="section">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:raghu.yanala@gmail.com">raghu.yanala@gmail.com</a></p>
-      </section>
-    </div>
+          <footer className="py-6 text-center text-muted border-t border-border-color">
+            <p>© {new Date().getFullYear()} Yanala Raghuvamshi Reddy. Built with Next.js & TailwindCSS.</p>
+          </footer>
+        </div>
+      </body>
+    </html>
   );
 }
