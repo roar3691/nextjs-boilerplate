@@ -2,94 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom Color Variables */
 :root {
-  --background: hsl(210, 16%, 98%);
-  --foreground: hsl(222, 47%, 11%);
-  --primary: #222222;
-  --primary-hover: #171717;
+  --background: #f9f9f9;
+  --foreground: #111;
+  --primary: #222;
   --secondary: #0073b1;
-  --secondary-hover: #006097;
   --accent: #fbbc05;
-  --accent-hover: #f6a800;
-  --highlight: #ff3b30;
-  --highlight-hover: #d72c2a;
-  --text-muted: hsl(222, 15%, 60%);
-  --border-color: hsl(210, 16%, 90%);
-  --subtle-link: hsl(215, 55%, 50%);
-  scroll-behavior: smooth;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: hsl(222, 47%, 11%);
-    --foreground: hsl(210, 16%, 98%);
-    --primary: #f6f8fa;
-    --primary-hover: #ffffff;
-    --secondary: #006097;
-    --secondary-hover: #004f75;
-    --accent: #f6a800;
-    --accent-hover: #fbbc05;
-    --highlight: #ff3b30;
-    --highlight-hover: #d72c2a;
-    --text-muted: hsl(222, 20%, 70%);
-    --border-color: hsl(222, 27%, 18%);
-    --subtle-link: hsl(215, 60%, 50%);
+    --background: #111;
+    --foreground: #f9f9f9;
   }
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-a {
-  text-decoration: none;
-  color: var(--subtle-link);
-  transition: color 0.3s ease;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
-a:hover {
-  color: var(--highlight);
+.navbar {
+  @apply flex justify-between items-center p-6 bg-primary text-white shadow-md;
 }
 
-.btn {
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  text-align: center;
-  transition: all 0.3s ease-in-out;
+.section {
+  @apply py-12;
 }
 
-.btn:hover {
-  transform: scale(1.05);
-}
-
-.card {
-  background: var(--background);
-  border: 1px solid var(--border-color);
-  border-radius: 10px;
-  padding: 1.5rem;
-  transition: all 0.3s ease-in-out;
-}
-
-.card:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  transform: translateY(-5px);
-}
-
-/* Contact Form */
-.input-field {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid var(--border-color);
-  border-radius: 0.5rem;
-  transition: border 0.3s ease-in-out;
-}
-
-.input-field:focus {
-  border-color: var(--primary);
-  outline: none;
+.section h2 {
+  @apply text-3xl font-bold;
 }
