@@ -15,7 +15,7 @@ export default function Home() {
               href="https://github.com/roar3691"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 bg-black dark:bg-gray-800 text-white rounded-lg shadow-md hover:bg-gray-800 dark:hover:bg-gray-600 transition"
+              className="px-6 py-3 bg-black dark:bg-gray-800 text-white rounded-lg shadow-md hover:bg-gray-800 dark:hover:bg-gray-600 hover:text-white transition"
             >
               GitHub
             </a>
@@ -23,7 +23,7 @@ export default function Home() {
               href="https://www.linkedin.com/in/yanala-raghuvamshi-reddy-a9a831202/"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 bg-blue-600 dark:bg-blue-700 text-white rounded-lg shadow-md hover:bg-blue-700 dark:hover:bg-blue-600 transition"
+              className="px-6 py-3 bg-blue-600 dark:bg-blue-700 text-white rounded-lg shadow-md hover:bg-blue-700 dark:hover:bg-blue-600 hover:text-white transition"
             >
               LinkedIn
             </a>
@@ -31,7 +31,7 @@ export default function Home() {
               href="https://drive.google.com/file/d/1wKt8vT5hZ7T5FYRMufx_r3KVFSW3m-UA/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 bg-yellow-500 dark:bg-yellow-600 text-white rounded-lg shadow-md hover:bg-yellow-600 dark:hover:bg-yellow-700 transition"
+              className="px-6 py-3 bg-yellow-500 dark:bg-yellow-600 text-white rounded-lg shadow-md hover:bg-yellow-600 dark:hover:bg-yellow-700 hover:text-white transition"
             >
               Resume
             </a>
