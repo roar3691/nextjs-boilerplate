@@ -1,37 +1,35 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
-const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: "Yanala Raghuvamshi Reddy | AI/ML Portfolio",
-  description: "Showcasing projects, skills, and research in AI/ML",
-};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body className="bg-background text-foreground font-body">
-        <div className="container mx-auto px-6 lg:px-12">
-          <header className="text-center py-6 border-b border-border-color">
-            <h1 className="text-5xl font-heading text-primary mb-2">Yanala Raghuvamshi Reddy</h1>
-            <p className="text-lg text-muted">AI/ML Enthusiast | Researcher | IEEE Treasurer</p>
-            <nav className="mt-6 space-x-6">
-              <a href="#skills" className="hover:text-highlight">Skills</a>
-              <a href="#projects" className="hover:text-highlight">Projects</a>
-              <a href="#contact" className="hover:text-highlight">Contact</a>
-            </nav>
-          </header>
-
-          {children}
-
-          <footer className="py-6 text-center text-muted border-t border-border-color">
-            <p>© {new Date().getFullYear()} Yanala Raghuvamshi Reddy. Built with Next.js & TailwindCSS.</p>
-          </footer>
-        </div>
+    <html lang="en">
+      <body>
+        <nav className="navbar">
+          <h1 className="text-2xl font-bold">Yanala Raghuvamshi Reddy</h1>
+          <div className="flex gap-6">
+            <a href="#about" className="hover:underline">About</a>
+            <a href="#skills" className="hover:underline">Skills</a>
+            <a href="#projects" className="hover:underline">Projects</a>
+            <a href="#research" className="hover:underline">Research</a>
+            <a href="#contact" className="hover:underline">Contact</a>
+          </div>
+          <ThemeToggle />
+        </nav>
+        <main className="container">{children}</main>
       </body>
     </html>
+  );
+}
+
+function ThemeToggle() {
+  return (
+    <button 
+      onClick={() => {
+        document.documentElement.classList.toggle("dark");
+      }} 
+      className="p-2 rounded"
+    >
+      🌙 / ☀️
+    </button>
   );
 }
