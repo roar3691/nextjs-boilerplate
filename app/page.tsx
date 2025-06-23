@@ -19,7 +19,7 @@ export default function Home() {
         <div className="flex space-x-4 justify-center">
           <a href="https://github.com/roar3691" target="_blank" className="btn bg-black text-white">GitHub</a>
           <a href="https://www.linkedin.com/in/yanala-raghuvamshi-reddy-a9a831202/" target="_blank" className="btn bg-blue-600 text-white">LinkedIn</a>
-          <a href="https://drive.google.com/file/d/1mafTX_5hPsQqbj4LpAx5SMR-l_weTMfA/view?usp=sharing" target="_blank" className="btn bg-yellow-500 text-white">Resume</a>
+          <a href="https://drive.google.com/file/d/1mafTX_5hPsQqbj4LpAx5SMR-l_weTMfA/view?usp=drivesdk" target="_blank" className="btn bg-yellow-500 text-white">Resume</a>
         </div>
       </section>
 
