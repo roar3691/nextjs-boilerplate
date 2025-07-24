@@ -58,6 +58,9 @@ export default function Home() {
             <p className="text-lg">
               During my 45-day research internship at ISRO, I developed an R-based pipeline to analyze evapotranspiration (ET) and cumulative water deficit (CWD) across multiple sites, using neural networks and the MCT algorithm to model water stress and generate density plots. Guided by expert scientists, I gained expertise in environmental data analysis and strengthened my passion for aerospace research.
             </p>
+            <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
+              June 2025 – August 2025
+            </p>
           </div>
         </section>
 
