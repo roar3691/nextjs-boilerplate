@@ -28,7 +28,7 @@ export default function Home() {
               LinkedIn
             </a>
             <a
-              href="https://drive.google.com/file/d/1wKt8vT5hZ7T5FYRMufx_r3KVFSW3m-UA/view?usp=sharing"
+              href="https://drive.google.com/file/d/10HyzPYpf9GmxvuEBtbfO_JEMecEu5mHP/view?usp=drivesdk"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 bg-yellow-500 dark:bg-yellow-600 text-white rounded-lg shadow-md hover:bg-yellow-600 dark:hover:bg-yellow-700 hover:text-white transition"
@@ -55,7 +55,7 @@ export default function Home() {
           <div className="max-w-2xl mx-auto text-center">
             <h3 className="text-xl font-semibold mb-2">Indian Space Research Organisation (ISRO)</h3>
             <p className="text-lg">
-              During my 45-day internship at ISRO, I worked on satellite data analysis, assisting with telemetry processing and system simulations. Guided by expert scientists, I gained hands-on experience in space technology and honed skills in data analysis and teamwork. This transformative experience deepened my passion for aerospace and strengthened my technical expertise.
+              During my 45-day research internship at ISRO, I developed an R-based pipeline to analyze evapotranspiration (ET) and cumulative water deficit (CWD) across multiple sites, using neural networks and the MCT algorithm to model water stress and generate density plots. Guided by expert scientists, I gained expertise in environmental data analysis and strengthened my passion for aerospace research.
             </p>
           </div>
         </section>
