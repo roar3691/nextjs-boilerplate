@@ -89,25 +89,7 @@ export default function Home() {
               >
                 Chatbot Project
               </a>{" "}
-              shines with Streamlit and Gemini AI, enabling smart, context-rich conversations; {" "}
-              <a
-                href="https://huggingface.co/spaces/roar3691/NewsSummarizerTTS"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-500 dark:text-blue-400 hover:underline font-semibold"
-              >
-                NewsEcho
-              </a>{" "}
-              innovates news delivery with Streamlit, FastAPI, and Hindi TTS for multilingual access; and {" "}
-              <a
-                href="https://huggingface.co/spaces/roar3691/coding_assistant"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-500 dark:text-blue-400 hover:underline font-semibold"
-              >
-                CodeWizard
-              </a>{" "}
-              empowers coders via DeepSeek LLM, Google Search, and MongoDB on Hugging Face Spaces—bold, impactful solutions to real-world challenges.
+              shines with Streamlit and Gemini AI, enabling smart, context-rich conversations—bold, impactful solutions to real-world challenges.
             </p>
           </div>
 
@@ -138,32 +120,6 @@ export default function Home() {
                 </a>
               </h3>
               <p>Built a chatbot using Streamlit and Gemini AI for enhanced conversational functionalities.</p>
-            </div>
-            <div className="bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold mb-2">
-                <a
-                  href="https://huggingface.co/spaces/roar3691/NewsSummarizerTTS"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:underline"
-                >
-                  NewsEcho
-                </a>
-              </h3>
-              <p>Summarizes news and converts sentiment analysis to Hindi TTS using Streamlit and FastAPI.</p>
-            </div>
-            <div className="bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold mb-2">
-                <a
-                  href="https://huggingface.co/spaces/roar3691/coding_assistant"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:underline"
-                >
-                  CodeWizard
-                </a>
-              </h3>
-              <p>A coding assistant powered by DeepSeek LLM, Google Search, and MongoDB for persistent storage.</p>
             </div>
           </div>
         </section>
