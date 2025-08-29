@@ -28,7 +28,7 @@ export default function Home() {
               LinkedIn
             </a>
             <a
-              href="https://drive.google.com/file/d/1wKt8vT5hZ7T5FYRMufx_r3KVFSW3m-UA/view?usp=sharing"
+              href="https://drive.google.com/file/d/1Ph8AJE1KOlXLnjFzLCSDuUPETKfb9SnK/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 bg-yellow-500 dark:bg-yellow-600 text-white rounded-lg shadow-md hover:bg-yellow-600 dark:hover:bg-yellow-700 hover:text-white transition"
