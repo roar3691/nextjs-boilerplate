@@ -12,10 +12,10 @@ export default function Home() {
             Hi, I’m <span className="text-blue-600 dark:text-blue-400">Raghu</span>
           </h1>
           <p className="text-lg max-w-3xl mx-auto mb-10 leading-relaxed">
-            A passionate <span className="font-semibold">AI/ML student & researcher</span> 
-            with experience in <span className="font-semibold">deep learning, computer vision,</span> 
+            A passionate <span className="font-semibold">AI/ML student & researcher</span>{" "}
+            with experience in <span className="font-semibold">deep learning, computer vision,</span>{" "}
             and <span className="font-semibold">environmental modeling</span>. 
-            I focus on building impactful solutions by combining research-driven approaches 
+            I focus on building impactful solutions by combining research-driven approaches{" "}
             with real-world applications.
           </p>
 
@@ -66,16 +66,16 @@ export default function Home() {
           <div className="max-w-3xl mx-auto text-center">
             <h3 className="text-xl font-semibold mb-3">Indian Space Research Organisation (ISRO – NRSC)</h3>
             <p className="text-lg leading-relaxed">
-              Completed a research internship on the 
-              <span className="font-semibold"> SM_ET_DNN framework</span> for 
-              <span className="font-semibold"> evapotranspiration (ET) and potential ET (PET)</span> modeling. 
-              Developed deep neural networks using <span className="font-semibold">TensorFlow</span>, 
-              implemented <span className="font-semibold">automatic soil moisture thresholding</span>, 
+              Completed a research internship on the{" "}
+              <span className="font-semibold">SM_ET_DNN framework</span> for{" "}
+              <span className="font-semibold">evapotranspiration (ET) and potential ET (PET)</span> modeling. 
+              Developed deep neural networks using <span className="font-semibold">TensorFlow</span>,{" "}
+              implemented <span className="font-semibold">automatic soil moisture thresholding</span>,{" "}
               and computed <span className="font-semibold">cumulative water deficit (CWD)</span> to track drought stress. 
               This work integrated environmental data analysis with AI-based modeling.
             </p>
             <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
-              June 2025 – July 2025
+              June 2025 – August 2025
             </p>
           </div>
         </section>
@@ -86,8 +86,8 @@ export default function Home() {
 
           {/* Intro */}
           <p className="max-w-3xl mx-auto text-center text-lg mb-12 leading-relaxed">
-            My projects reflect my interest in <span className="font-semibold">AI/ML research</span> 
-            and real-world problem solving. From environmental modeling to 
+            My projects reflect my interest in <span className="font-semibold">AI/ML research</span>{" "}
+            and real-world problem solving. From environmental modeling to{" "}
             intelligent defect detection, I focus on innovation, accuracy, and impact.
           </p>
 
@@ -124,8 +124,8 @@ export default function Home() {
                 </a>
               </h3>
               <p>
-                Developed a conversational AI system using Streamlit and Gemini AI 
-                with contextual attention and memory. Enabled personalized, 
+                Developed a conversational AI system using Streamlit and Gemini AI{" "}
+                with contextual attention and memory. Enabled personalized,{" "}
                 context-aware interactions for a more human-like chatbot experience.
               </p>
             </div>
