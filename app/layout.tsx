@@ -28,7 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
 
           <footer className="py-6 text-center text-muted border-t border-border-color">
-            <p>© {new Date().getFullYear()} Yanala Raghuvamshi Reddy. Built with Next.js & TailwindCSS.</p>
+            {/* Footer text removed as requested */}
           </footer>
         </div>
       </body>
