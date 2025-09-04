@@ -64,7 +64,16 @@ export default function Home() {
         <section id="internship" className="py-16 bg-gray-50 dark:bg-gray-800 rounded-lg shadow-inner">
           <h2 className="text-3xl font-bold mb-8 text-center">Internship Experience</h2>
           <div className="max-w-3xl mx-auto text-center">
-            <h3 className="text-xl font-semibold mb-3">Indian Space Research Organisation (ISRO – NRSC)</h3>
+            <h3 className="text-xl font-semibold mb-3">
+              <a
+                href="https://drive.google.com/file/d/1nsX1gWBSKIBv6VWQmD4rzGVnpBG8ecjJ/view?usp=drivesdk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline text-blue-600 dark:text-blue-400"
+              >
+                Indian Space Research Organisation (ISRO – NRSC)
+              </a>
+            </h3>
             <p className="text-lg leading-relaxed">
               Completed a research internship on the{" "}
               <span className="font-semibold">SM_ET_DNN framework</span> for{" "}
